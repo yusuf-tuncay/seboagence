@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 
-/// 🌐 App Localizations
-/// Çoklu dil desteği için ana sınıf
+/// ğŸŒ App Localizations
+/// Ã‡oklu dil desteÄŸi iÃ§in ana sÄ±nÄ±f
 
 class AppLocalizations {
   final Locale locale;
@@ -15,25 +15,25 @@ class AppLocalizations {
   static const LocalizationsDelegate<AppLocalizations> delegate = AppLocalizationsDelegate();
   
   static const List<Locale> supportedLocales = [
-    Locale('tr', 'TR'), // Türkçe
-    Locale('en', 'US'), // İngilizce
+    Locale('tr', 'TR'), // TÃ¼rkÃ§e
+    Locale('en', 'US'), // Ä°ngilizce
     Locale('de', 'DE'), // Almanca
   ];
   
-  // 🏠 Ana Sayfa
+  // ğŸ  Ana Sayfa
   String get home => _localizedValues[locale.languageCode]!['home']!;
   String get about => _localizedValues[locale.languageCode]!['about']!;
   String get works => _localizedValues[locale.languageCode]!['works']!;
   String get contact => _localizedValues[locale.languageCode]!['contact']!;
   
-  // 🎯 Hero Section
+  // ğŸ¯ Hero Section
   String get heroTitle => _localizedValues[locale.languageCode]!['heroTitle']!;
   String get heroSubtitle => _localizedValues[locale.languageCode]!['heroSubtitle']!;
   String get heroDescription => _localizedValues[locale.languageCode]!['heroDescription']!;
   String get getStarted => _localizedValues[locale.languageCode]!['getStarted']!;
   String get learnMore => _localizedValues[locale.languageCode]!['learnMore']!;
   
-  // 👥 Hakkımızda
+  // ğŸ‘¥ HakkÄ±mÄ±zda
   String get aboutTitle => _localizedValues[locale.languageCode]!['aboutTitle']!;
   String get aboutDescription => _localizedValues[locale.languageCode]!['aboutDescription']!;
   String get mission => _localizedValues[locale.languageCode]!['mission']!;
@@ -41,13 +41,13 @@ class AppLocalizations {
   String get missionDescription => _localizedValues[locale.languageCode]!['missionDescription']!;
   String get visionDescription => _localizedValues[locale.languageCode]!['visionDescription']!;
   
-  // 🎨 Hoş İşler
+  // ğŸ¨ HoÅŸ Ä°ÅŸler
   String get worksTitle => _localizedValues[locale.languageCode]!['worksTitle']!;
   String get worksDescription => _localizedValues[locale.languageCode]!['worksDescription']!;
   String get viewProject => _localizedValues[locale.languageCode]!['viewProject']!;
   String get allProjects => _localizedValues[locale.languageCode]!['allProjects']!;
   
-  // 📞 İletişim
+  // ğŸ“ Ä°letiÅŸim
   String get contactTitle => _localizedValues[locale.languageCode]!['contactTitle']!;
   String get contactDescription => _localizedValues[locale.languageCode]!['contactDescription']!;
   String get name => _localizedValues[locale.languageCode]!['name']!;
@@ -57,34 +57,34 @@ class AppLocalizations {
   String get sendMessage => _localizedValues[locale.languageCode]!['sendMessage']!;
   String get messageSent => _localizedValues[locale.languageCode]!['messageSent']!;
   
-  // 🎯 Projeler
+  // ğŸ¯ Projeler
   String get vefa => _localizedValues[locale.languageCode]!['vefa']!;
   String get sefa => _localizedValues[locale.languageCode]!['sefa']!;
   String get sifa => _localizedValues[locale.languageCode]!['sifa']!;
   String get projectDescription => _localizedValues[locale.languageCode]!['projectDescription']!;
   
-  // 🏢 Ajans Bilgileri
+  // ğŸ¢ Ajans Bilgileri
   String get agencyName => _localizedValues[locale.languageCode]!['agencyName']!;
   String get agencyTagline => _localizedValues[locale.languageCode]!['agencyTagline']!;
   String get agencyDescription => _localizedValues[locale.languageCode]!['agencyDescription']!;
   
-  // 📍 Konum
+  // ğŸ“ Konum
   String get location => _localizedValues[locale.languageCode]!['location']!;
   String get address => _localizedValues[locale.languageCode]!['address']!;
   
-  // 🔗 Sosyal Medya
+  // ğŸ”— Sosyal Medya
   String get followUs => _localizedValues[locale.languageCode]!['followUs']!;
   String get linkedin => _localizedValues[locale.languageCode]!['linkedin']!;
   String get instagram => _localizedValues[locale.languageCode]!['instagram']!;
   String get twitter => _localizedValues[locale.languageCode]!['twitter']!;
   String get behance => _localizedValues[locale.languageCode]!['behance']!;
   
-  // ❌ Hata Mesajları
+  // âŒ Hata MesajlarÄ±
   String get notFound => _localizedValues[locale.languageCode]!['notFound']!;
   String get errorOccurred => _localizedValues[locale.languageCode]!['errorOccurred']!;
   String get tryAgain => _localizedValues[locale.languageCode]!['tryAgain']!;
   
-  // 🎯 Eksik Çeviriler
+  // ğŸ¯ Eksik Ã‡eviriler
   String get language => _localizedValues[locale.languageCode]!['language']!;
   String get currentLanguage => _localizedValues[locale.languageCode]!['currentLanguage']!;
   String get languageInfo => _localizedValues[locale.languageCode]!['languageInfo']!;
@@ -102,67 +102,67 @@ class AppLocalizations {
   String get ourVision => _localizedValues[locale.languageCode]!['ourVision']!;
   String get seeAll => _localizedValues[locale.languageCode]!['seeAll']!;
   
-  // 📱 Form Mesajları
+  // ğŸ“± Form MesajlarÄ±
   String get required => _localizedValues[locale.languageCode]!['required']!;
   String get invalidEmail => _localizedValues[locale.languageCode]!['invalidEmail']!;
   String get invalidPhone => _localizedValues[locale.languageCode]!['invalidPhone']!;
   String get messageTooShort => _localizedValues[locale.languageCode]!['messageTooShort']!;
   String get messageTooLong => _localizedValues[locale.languageCode]!['messageTooLong']!;
   
-  // 🎨 Çeviriler
+  // ğŸ¨ Ã‡eviriler
   static final Map<String, Map<String, String>> _localizedValues = {
     'tr': {
       // Ana Sayfa
       'home': 'Ana Sayfa',
-      'about': 'Hakkımızda',
-      'works': 'Hoş İşler',
-      'contact': 'İletişim',
+      'about': 'HakkÄ±mÄ±zda',
+      'works': 'HoÅŸ Ä°ÅŸler',
+      'contact': 'Ä°letiÅŸim',
       
       // Hero Section
-      'heroTitle': 'Yaratıcı Ajans',
-      'heroSubtitle': 'Markanızı Hayata Geçiriyoruz',
-      'heroDescription': 'Dijital dünyada fark yaratan çözümlerle markanızı öne çıkarıyoruz.',
-      'getStarted': 'Başlayalım',
+      'heroTitle': 'YaratÄ±cÄ± Ajans',
+      'heroSubtitle': 'MarkanÄ±zÄ± Hayata GeÃ§iriyoruz',
+      'heroDescription': 'Dijital dÃ¼nyada fark yaratan Ã§Ã¶zÃ¼mlerle markanÄ±zÄ± Ã¶ne Ã§Ä±karÄ±yoruz.',
+      'getStarted': 'BaÅŸlayalÄ±m',
       'learnMore': 'Daha Fazla Bilgi',
       
-      // Hakkımızda
-      'aboutTitle': 'Hakkımızda',
-      'aboutDescription': 'Yaratıcılık ve teknolojiyi birleştirerek markaların dijital dönüşümüne öncülük ediyoruz.',
+      // HakkÄ±mÄ±zda
+      'aboutTitle': 'HakkÄ±mÄ±zda',
+      'aboutDescription': 'YaratÄ±cÄ±lÄ±k ve teknolojiyi birleÅŸtirerek markalarÄ±n dijital dÃ¶nÃ¼ÅŸÃ¼mÃ¼ne Ã¶ncÃ¼lÃ¼k ediyoruz.',
       'mission': 'Misyonumuz',
       'vision': 'Vizyonumuz',
-      'missionDescription': 'Markaların dijital dünyada güçlü bir varlık oluşturmasına yardımcı olmak.',
-      'visionDescription': 'Yaratıcılık ve teknolojinin buluştuğu bir gelecek inşa etmek.',
+      'missionDescription': 'MarkalarÄ±n dijital dÃ¼nyada gÃ¼Ã§lÃ¼ bir varlÄ±k oluÅŸturmasÄ±na yardÄ±mcÄ± olmak.',
+      'visionDescription': 'YaratÄ±cÄ±lÄ±k ve teknolojinin buluÅŸtuÄŸu bir gelecek inÅŸa etmek.',
       
-      // Hoş İşler
-      'worksTitle': 'Hoş İşler',
-      'worksDescription': 'Yaratıcılığımızın en güzel örnekleri.',
-      'viewProject': 'Projeyi Gör',
-      'allProjects': 'Tüm Projeler',
+      // HoÅŸ Ä°ÅŸler
+      'worksTitle': 'HoÅŸ Ä°ÅŸler',
+      'worksDescription': 'YaratÄ±cÄ±lÄ±ÄŸÄ±mÄ±zÄ±n en gÃ¼zel Ã¶rnekleri.',
+      'viewProject': 'Projeyi GÃ¶r',
+      'allProjects': 'TÃ¼m Projeler',
       
-      // İletişim
-      'contactTitle': 'İletişim',
-      'contactDescription': 'Projeleriniz için bizimle iletişime geçin.',
-      'name': 'İsim',
+      // Ä°letiÅŸim
+      'contactTitle': 'Ä°letiÅŸim',
+      'contactDescription': 'Projeleriniz iÃ§in bizimle iletiÅŸime geÃ§in.',
+      'name': 'Ä°sim',
       'email': 'E-posta',
       'phone': 'Telefon',
       'message': 'Mesaj',
-      'sendMessage': 'Mesaj Gönder',
-      'messageSent': 'Mesajınız başarıyla gönderildi!',
+      'sendMessage': 'Mesaj GÃ¶nder',
+      'messageSent': 'MesajÄ±nÄ±z baÅŸarÄ±yla gÃ¶nderildi!',
       
       // Projeler
       'vefa': 'Vefa',
       'sefa': 'Sefa',
-      'sifa': 'Şifa',
-      'projectDescription': 'Yaratıcı çözümlerle markaların dijital dönüşümü.',
+      'sifa': 'Åifa',
+      'projectDescription': 'YaratÄ±cÄ± Ã§Ã¶zÃ¼mlerle markalarÄ±n dijital dÃ¶nÃ¼ÅŸÃ¼mÃ¼.',
       
       // Ajans Bilgileri
-      'agencyName': 'L’Agence Şebo',
-      'agencyTagline': 'Yaratıcı Ajans',
-      'agencyDescription': 'Dijital dünyada fark yaratan çözümler.',
+      'agencyName': 'Lâ€™Agence Åebo',
+      'agencyTagline': 'YaratÄ±cÄ± Ajans',
+      'agencyDescription': 'Dijital dÃ¼nyada fark yaratan Ã§Ã¶zÃ¼mler.',
       
       // Konum
       'location': 'Konum',
-      'address': 'İstanbul, Türkiye',
+      'address': 'Ä°stanbul, TÃ¼rkiye',
       
       // Sosyal Medya
       'followUs': 'Bizi Takip Edin',
@@ -171,35 +171,35 @@ class AppLocalizations {
       'twitter': 'Twitter',
       'behance': 'Behance',
       
-      // Hata Mesajları
-      'notFound': 'Sayfa Bulunamadı',
-      'errorOccurred': 'Bir hata oluştu',
+      // Hata MesajlarÄ±
+      'notFound': 'Sayfa BulunamadÄ±',
+      'errorOccurred': 'Bir hata oluÅŸtu',
       'tryAgain': 'Tekrar Deneyin',
       
-      // Form Mesajları
+      // Form MesajlarÄ±
       'required': 'Bu alan zorunludur',
-      'invalidEmail': 'Geçerli bir e-posta adresi girin',
-      'invalidPhone': 'Geçerli bir telefon numarası girin',
-      'messageTooShort': 'Mesaj çok kısa',
-      'messageTooLong': 'Mesaj çok uzun',
+      'invalidEmail': 'GeÃ§erli bir e-posta adresi girin',
+      'invalidPhone': 'GeÃ§erli bir telefon numarasÄ± girin',
+      'messageTooShort': 'Mesaj Ã§ok kÄ±sa',
+      'messageTooLong': 'Mesaj Ã§ok uzun',
       
-      // Eksik Çeviriler
+      // Eksik Ã‡eviriler
       'language': 'Dil',
       'currentLanguage': 'Mevcut Dil',
       'languageInfo': 'Dil Bilgisi',
-      'languageInfoDescription': 'Dil değişikliği uygulamanın tüm metinlerini etkiler. Değişiklik anında uygulanır.',
-      'whatWeDo': 'Ne Yapıyoruz',
-      'whyWeDo': 'Neden Yapıyoruz',
+      'languageInfoDescription': 'Dil deÄŸiÅŸikliÄŸi uygulamanÄ±n tÃ¼m metinlerini etkiler. DeÄŸiÅŸiklik anÄ±nda uygulanÄ±r.',
+      'whatWeDo': 'Ne YapÄ±yoruz',
+      'whyWeDo': 'Neden YapÄ±yoruz',
       'conferences': 'Konferanslar',
-      'contactUs': 'İletişime Geçin',
-      'send': 'Gönder',
+      'contactUs': 'Ä°letiÅŸime GeÃ§in',
+      'send': 'GÃ¶nder',
       'socialMedia': 'Sosyal Medya',
       'whoWeAre': 'Biz Kimiz',
-      'ourWorks': 'İşlerimiz',
-      'getInTouch': 'İletişime Geçin',
+      'ourWorks': 'Ä°ÅŸlerimiz',
+      'getInTouch': 'Ä°letiÅŸime GeÃ§in',
       'ourMission': 'Misyonumuz',
       'ourVision': 'Vizyonumuz',
-      'seeAll': 'Tümünü Gör',
+      'seeAll': 'TÃ¼mÃ¼nÃ¼ GÃ¶r',
     },
     'en': {
       // Ana Sayfa
@@ -215,7 +215,7 @@ class AppLocalizations {
       'getStarted': 'Get Started',
       'learnMore': 'Learn More',
       
-      // Hakkımızda
+      // HakkÄ±mÄ±zda
       'aboutTitle': 'About Us',
       'aboutDescription': 'We lead the digital transformation of brands by combining creativity and technology.',
       'mission': 'Our Mission',
@@ -223,13 +223,13 @@ class AppLocalizations {
       'missionDescription': 'To help brands create a strong presence in the digital world.',
       'visionDescription': 'To build a future where creativity and technology meet.',
       
-      // Hoş İşler
+      // HoÅŸ Ä°ÅŸler
       'worksTitle': 'Our Works',
       'worksDescription': 'The finest examples of our creativity.',
       'viewProject': 'View Project',
       'allProjects': 'All Projects',
       
-      // İletişim
+      // Ä°letiÅŸim
       'contactTitle': 'Contact',
       'contactDescription': 'Get in touch with us for your projects.',
       'name': 'Name',
@@ -246,7 +246,7 @@ class AppLocalizations {
       'projectDescription': 'Digital transformation of brands with creative solutions.',
       
       // Ajans Bilgileri
-      'agencyName': 'Sebo Agency',
+      'agencyName': 'Ajans Hoş İşler',
       'agencyTagline': 'Creative Agency',
       'agencyDescription': 'Creative solutions that make a difference in the digital world.',
       
@@ -261,19 +261,19 @@ class AppLocalizations {
       'twitter': 'Twitter',
       'behance': 'Behance',
       
-      // Hata Mesajları
+      // Hata MesajlarÄ±
       'notFound': 'Page Not Found',
       'errorOccurred': 'An error occurred',
       'tryAgain': 'Try Again',
       
-      // Form Mesajları
+      // Form MesajlarÄ±
       'required': 'This field is required',
       'invalidEmail': 'Please enter a valid email address',
       'invalidPhone': 'Please enter a valid phone number',
       'messageTooShort': 'Message is too short',
       'messageTooLong': 'Message is too long',
       
-      // Eksik Çeviriler
+      // Eksik Ã‡eviriler
       'language': 'Language',
       'currentLanguage': 'Current Language',
       'languageInfo': 'Language Info',
@@ -294,34 +294,34 @@ class AppLocalizations {
     'de': {
       // Ana Sayfa
       'home': 'Startseite',
-      'about': 'Über uns',
+      'about': 'Ãœber uns',
       'works': 'Arbeiten',
       'contact': 'Kontakt',
       
       // Hero Section
       'heroTitle': 'Kreative Agentur',
       'heroSubtitle': 'Ihre Marke zum Leben erwecken',
-      'heroDescription': 'Wir lassen Ihre Marke mit kreativen Lösungen in der digitalen Welt hervorstechen.',
+      'heroDescription': 'Wir lassen Ihre Marke mit kreativen LÃ¶sungen in der digitalen Welt hervorstechen.',
       'getStarted': 'Loslegen',
       'learnMore': 'Mehr erfahren',
       
-      // Hakkımızda
-      'aboutTitle': 'Über uns',
-      'aboutDescription': 'Wir führen die digitale Transformation von Marken durch die Verbindung von Kreativität und Technologie.',
+      // HakkÄ±mÄ±zda
+      'aboutTitle': 'Ãœber uns',
+      'aboutDescription': 'Wir fÃ¼hren die digitale Transformation von Marken durch die Verbindung von KreativitÃ¤t und Technologie.',
       'mission': 'Unsere Mission',
       'vision': 'Unsere Vision',
-      'missionDescription': 'Marken dabei zu helfen, eine starke Präsenz in der digitalen Welt zu schaffen.',
-      'visionDescription': 'Eine Zukunft zu schaffen, in der Kreativität und Technologie aufeinandertreffen.',
+      'missionDescription': 'Marken dabei zu helfen, eine starke PrÃ¤senz in der digitalen Welt zu schaffen.',
+      'visionDescription': 'Eine Zukunft zu schaffen, in der KreativitÃ¤t und Technologie aufeinandertreffen.',
       
-      // Hoş İşler
+      // HoÅŸ Ä°ÅŸler
       'worksTitle': 'Unsere Arbeiten',
-      'worksDescription': 'Die besten Beispiele unserer Kreativität.',
+      'worksDescription': 'Die besten Beispiele unserer KreativitÃ¤t.',
       'viewProject': 'Projekt ansehen',
       'allProjects': 'Alle Projekte',
       
-      // İletişim
+      // Ä°letiÅŸim
       'contactTitle': 'Kontakt',
-      'contactDescription': 'Kontaktieren Sie uns für Ihre Projekte.',
+      'contactDescription': 'Kontaktieren Sie uns fÃ¼r Ihre Projekte.',
       'name': 'Name',
       'email': 'E-Mail',
       'phone': 'Telefon',
@@ -333,16 +333,16 @@ class AppLocalizations {
       'vefa': 'Vefa',
       'sefa': 'Sefa',
       'sifa': 'Sifa',
-      'projectDescription': 'Digitale Transformation von Marken mit kreativen Lösungen.',
+      'projectDescription': 'Digitale Transformation von Marken mit kreativen LÃ¶sungen.',
       
       // Ajans Bilgileri
-      'agencyName': 'Sebo Agentur',
+      'agencyName': 'Ajans Hoş İşler',
       'agencyTagline': 'Kreative Agentur',
-      'agencyDescription': 'Kreative Lösungen, die in der digitalen Welt einen Unterschied machen.',
+      'agencyDescription': 'Kreative LÃ¶sungen, die in der digitalen Welt einen Unterschied machen.',
       
       // Konum
       'location': 'Standort',
-      'address': 'Istanbul, Türkei',
+      'address': 'Istanbul, TÃ¼rkei',
       
       // Sosyal Medya
       'followUs': 'Folgen Sie uns',
@@ -351,23 +351,23 @@ class AppLocalizations {
       'twitter': 'Twitter',
       'behance': 'Behance',
       
-      // Hata Mesajları
+      // Hata MesajlarÄ±
       'notFound': 'Seite nicht gefunden',
       'errorOccurred': 'Ein Fehler ist aufgetreten',
       'tryAgain': 'Erneut versuchen',
       
-      // Form Mesajları
+      // Form MesajlarÄ±
       'required': 'Dieses Feld ist erforderlich',
-      'invalidEmail': 'Bitte geben Sie eine gültige E-Mail-Adresse ein',
-      'invalidPhone': 'Bitte geben Sie eine gültige Telefonnummer ein',
+      'invalidEmail': 'Bitte geben Sie eine gÃ¼ltige E-Mail-Adresse ein',
+      'invalidPhone': 'Bitte geben Sie eine gÃ¼ltige Telefonnummer ein',
       'messageTooShort': 'Nachricht ist zu kurz',
       'messageTooLong': 'Nachricht ist zu lang',
       
-      // Eksik Çeviriler
+      // Eksik Ã‡eviriler
       'language': 'Sprache',
       'currentLanguage': 'Aktuelle Sprache',
       'languageInfo': 'Sprachinformationen',
-      'languageInfoDescription': 'Sprachänderungen betreffen alle Texte in der Anwendung. Änderungen werden sofort angewendet.',
+      'languageInfoDescription': 'SprachÃ¤nderungen betreffen alle Texte in der Anwendung. Ã„nderungen werden sofort angewendet.',
       'whatWeDo': 'Was Wir Tun',
       'whyWeDo': 'Warum Wir Tun',
       'conferences': 'Konferenzen',
@@ -384,7 +384,7 @@ class AppLocalizations {
   };
 }
 
-/// 🌐 App Localizations Delegate
+/// ğŸŒ App Localizations Delegate
 class AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
   const AppLocalizationsDelegate();
   

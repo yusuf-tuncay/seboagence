@@ -1,4 +1,4 @@
-/// 🌿 Şifa İpek Projesi Detay Sayfası
+﻿/// 🌿 Şifa İpek Projesi Detay Sayfası
 ///
 /// Bu sayfa, Şifa İpek projesinin detaylarını gösterir.
 /// Yeşil ve beyaz renk teması kullanılır.
@@ -1952,7 +1952,7 @@ class _FooterWidget extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            '© 2024 Şebo Agence. Tüm hakları saklıdır.',
+            '© 2024 Ajans Hoş İşler. Tüm hakları saklıdır.',
             textAlign: TextAlign.center,
             style: AppTypography.bodySmall.copyWith(
               color: const Color(0xFF808080),
@@ -1983,7 +1983,7 @@ class _FooterWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            '© 2024 Şebo Agence. Tüm hakları saklıdır.',
+            '© 2024 Ajans Hoş İşler. Tüm hakları saklıdır.',
             style: AppTypography.bodySmall.copyWith(
               color: const Color(0xFF808080),
               fontSize: 9,
@@ -2011,7 +2011,7 @@ class _FooterWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            '© 2024 Şebo Agence. Tüm hakları saklıdır.',
+            '© 2024 Ajans Hoş İşler. Tüm hakları saklıdır.',
             style: AppTypography.bodySmall.copyWith(
               color: const Color(0xFF808080),
               fontSize: 10,
@@ -2074,3 +2074,4 @@ class _HoverableFooterLinkState extends State<_HoverableFooterLink> {
     );
   }
 }
+

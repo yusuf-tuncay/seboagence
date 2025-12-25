@@ -1,4 +1,4 @@
-/// 📧 Contact Page - Ultra-Optimized İletişim sayfası
+﻿/// 📧 Contact Page - Ultra-Optimized İletişim sayfası
 ///
 /// Bu sayfa, maksimum performans ve kullanıcı deneyimi için optimize edilmiş iletişim bilgilerini gösterir.
 library;
@@ -1635,7 +1635,7 @@ class _FooterWidget extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            '© 2024 Şebo Agence. Tüm hakları saklıdır.',
+            '© 2024 Ajans Hoş İşler. Tüm hakları saklıdır.',
             textAlign: TextAlign.center,
             style: AppTypography.bodySmall.copyWith(
               color: const Color(0xFF808080),
@@ -1666,7 +1666,7 @@ class _FooterWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            '© 2024 Şebo Agence. Tüm hakları saklıdır.',
+            '© 2024 Ajans Hoş İşler. Tüm hakları saklıdır.',
             style: AppTypography.bodySmall.copyWith(
               color: const Color(0xFF808080),
               fontSize: 9,
@@ -1694,7 +1694,7 @@ class _FooterWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            '© 2024 Şebo Agence. Tüm hakları saklıdır.',
+            '© 2024 Ajans Hoş İşler. Tüm hakları saklıdır.',
             style: AppTypography.bodySmall.copyWith(
               color: const Color(0xFF808080),
               fontSize: 10,
@@ -1757,3 +1757,4 @@ class _HoverableFooterLinkState extends State<_HoverableFooterLink> {
     );
   }
 }
+

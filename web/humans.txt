@@ -1,6 +1,6 @@
-# TEAM
+﻿# TEAM
 
-    Developer: L’Agence Şebo Development Team
+    Developer: Ajans Hoş İşler Development Team
     Contact: info@seboagency.com
     From: Istanbul, Turkey
 
@@ -27,3 +27,4 @@
     Made with ❤️ in Istanbul, Turkey
     For vakıflar and kurumsal şirketler
     Bringing creativity to digital world
+

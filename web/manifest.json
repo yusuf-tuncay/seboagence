@@ -1,6 +1,6 @@
-{
-    "name": "L’Agence Şebo - Yaratıcı Dijital Ajans",
-    "short_name": "L’Agence Şebo",
+﻿{
+    "name": "Ajans Hoş İşler - Yaratıcı Dijital Ajans",
+    "short_name": "Ajans Hoş İşler",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#0175C2",
@@ -37,3 +37,4 @@
         }
     ]
 }
+

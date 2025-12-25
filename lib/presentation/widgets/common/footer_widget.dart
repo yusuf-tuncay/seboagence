@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import '../../../core/theme/typography.dart';
 import '../../../core/utils/responsive.dart';
 import '../../../core/services/navigation_service.dart';
@@ -575,7 +575,7 @@ class FooterWidget extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            '© 2024 Şebo Agence. Tüm hakları saklıdır.',
+            '© 2024 Ajans Hoş İşler. Tüm hakları saklıdır.',
             textAlign: TextAlign.center,
             style: AppTypography.bodySmall.copyWith(
               color: const Color(0xFF808080),
@@ -606,7 +606,7 @@ class FooterWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            '© 2024 Şebo Agence. Tüm hakları saklıdır.',
+            '© 2024 Ajans Hoş İşler. Tüm hakları saklıdır.',
             style: AppTypography.bodySmall.copyWith(
               color: const Color(0xFF808080),
               fontSize: 9,
@@ -634,7 +634,7 @@ class FooterWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            '© 2024 Şebo Agence. Tüm hakları saklıdır.',
+            '© 2024 Ajans Hoş İşler. Tüm hakları saklıdır.',
             style: AppTypography.bodySmall.copyWith(
               color: const Color(0xFF808080),
               fontSize: 10,
@@ -696,3 +696,4 @@ class _HoverableFooterLinkState extends State<_HoverableFooterLink> {
     );
   }
 }
+

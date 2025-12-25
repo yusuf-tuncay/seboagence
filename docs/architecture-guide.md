@@ -1,6 +1,6 @@
-# 🏗️ Şebo Agency - Mimari Rehberi
+﻿# 🏗️ Ajans Hoş İşler - Mimari Rehberi
 
-Bu dokümantasyon, Şebo Agency Flutter uygulamasının Clean Architecture prensiplerine dayalı mimari yapısını detaylı bir şekilde açıklar.
+Bu dokümantasyon, Ajans Hoş İşler Flutter uygulamasının Clean Architecture prensiplerine dayalı mimari yapısını detaylı bir şekilde açıklar.
 
 ## 📋 İçindekiler
 - [Mimari Genel Bakış](#mimari-genel-bakış)
@@ -386,7 +386,7 @@ Future<void> setupDependencies() async {
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await setupDependencies();
-  runApp(const SeboApp());
+  runApp(const AjansHosIslerApp());
 }
 ```
 
@@ -604,4 +604,6 @@ class Logger {
 
 **Son Güncelleme**: 2024
 **Versiyon**: 1.0.0
-**Geliştirici**: Şebo Agency Team
+**Geliştirici**: Ajans Hoş İşler Team
+
+

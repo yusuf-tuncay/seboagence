@@ -1,6 +1,6 @@
-# 🛠️ Şebo Agency - Kurulum Rehberi
+﻿# 🛠️ Ajans Hoş İşler - Kurulum Rehberi
 
-Bu dokümantasyon, Şebo Agency Flutter uygulamasının geliştirme ortamının kurulumunu ve yapılandırmasını detaylı bir şekilde açıklar.
+Bu dokümantasyon, Ajans Hoş İşler Flutter uygulamasının geliştirme ortamının kurulumunu ve yapılandırmasını detaylı bir şekilde açıklar.
 
 ## 📋 İçindekiler
 - [Sistem Gereksinimleri](#sistem-gereksinimleri)
@@ -230,7 +230,7 @@ mkdir -p docs
 ### 1. pubspec.yaml Konfigürasyonu
 ```yaml
 name: sebo_agence
-description: Şebo Agency - Creative Agency Flutter App
+description: Ajans Hoş İşler - Creative Agency Flutter App
 version: 1.0.0+1
 
 environment:
@@ -333,7 +333,7 @@ android {
 #### iOS (ios/Runner/Info.plist)
 ```xml
 <key>CFBundleDisplayName</key>
-<string>Şebo Agency</string>
+<string>Ajans Hoş İşler</string>
 <key>CFBundleIdentifier</key>
 <string>com.sebo.agency</string>
 <key>CFBundleVersion</key>
@@ -643,4 +643,5 @@ flutter run --trace-startup
 
 **Son Güncelleme**: 2024
 **Versiyon**: 1.0.0
-**Geliştirici**: Şebo Agency Team
+**Geliştirici**: Ajans Hoş İşler Team
+

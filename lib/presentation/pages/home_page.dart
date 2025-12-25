@@ -1,4 +1,4 @@
-/// 🏠 Home Page - Ana sayfa
+﻿/// 🏠 Home Page - Ana sayfa
 ///
 /// Bu sayfa, uygulamanın ana sayfasıdır.
 library;
@@ -103,13 +103,13 @@ class _HomePageState extends ConsumerState<HomePage>
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  // Hero Section - Şebo Ajans Tanıtımı
+                  // Hero Section - Ajans Hoş İşler Tanıtımı
                   _buildAgencyHeroSection(context),
 
                   // About Section - Kimim, Ne Yapıyoruz, Neden Çalışıyoruz
                   _buildAgencyAboutSection(context),
 
-                  // Projects Section - Hoş İşler (Şebo Ajans'ın Projeleri)
+                  // Projects Section - Hoş İşler (Ajans Hoş İşler'in Projeleri)
                   _buildAgencyProjectsSection(context),
 
                   // Conferences Section - Yurt Dışı Konferanslar & Etkinlikler
@@ -195,7 +195,7 @@ class _HomePageState extends ConsumerState<HomePage>
             child: Semantics(
               header: true,
               child: Text(
-                "L'Agence Şebo",
+                "Ajans Hoş İşler",
                 style: AppTypography.h1.copyWith(
                   color: Branding.white,
                   fontSize: 28,
@@ -293,7 +293,7 @@ class _HomePageState extends ConsumerState<HomePage>
             child: Semantics(
               header: true,
               child: Text(
-                "L'Agence Şebo",
+                "Ajans Hoş İşler",
                 style: AppTypography.h1.copyWith(
                   color: Branding.white,
                   fontSize: 48,
@@ -391,7 +391,7 @@ class _HomePageState extends ConsumerState<HomePage>
             child: Semantics(
               header: true,
               child: Text(
-                "L'Agence Şebo",
+                "Ajans Hoş İşler",
                 style: AppTypography.h1.copyWith(
                   color: Branding.white,
                   fontSize: 56,
@@ -2219,7 +2219,7 @@ class _HomePageState extends ConsumerState<HomePage>
         // Başlık - Mobile'da ortalanmış
         Center(
           child: Text(
-            'Şebo Ajans Hikayesi',
+            'Ajans Hoş İşler Hikayesi',
             textAlign: TextAlign.center,
             style: AppTypography.h3.copyWith(
               color: const Color(0xFF2C2C2C),
@@ -2248,7 +2248,7 @@ class _HomePageState extends ConsumerState<HomePage>
 
         // Ana metin - Mobile'da daha küçük font
         Text(
-          '20+ yıllık lüks perakende deneyimi ile Louis Vuitton, Gucci ve Bulgari gibi dünya devi markaların Türkiye pazarında büyümesine liderlik ettim. Harvard Business School eğitimi ve küresel marka yönetimi deneyimimle, Şebo Ajans\'ı kurarak bu bilgi birikimini dijital dünyaya taşıyorum.',
+          '20+ yıllık lüks perakende deneyimi ile Louis Vuitton, Gucci ve Bulgari gibi dünya devi markaların Türkiye pazarında büyümesine liderlik ettim. Harvard Business School eğitimi ve küresel marka yönetimi deneyimimle, Ajans Hoş İşler\'ı kurarak bu bilgi birikimini dijital dünyaya taşıyorum.',
           textAlign: TextAlign.justify,
           style: AppTypography.bodyLarge.copyWith(
             color: const Color(0xFF4A4A4A),
@@ -2278,7 +2278,7 @@ class _HomePageState extends ConsumerState<HomePage>
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Şebo Ajans Hikayesi',
+          'Ajans Hoş İşler Hikayesi',
           style: AppTypography.h3.copyWith(
             color: const Color(0xFF2C2C2C),
             fontWeight: FontWeight.w700,
@@ -2300,7 +2300,7 @@ class _HomePageState extends ConsumerState<HomePage>
         const SizedBox(height: 20),
 
         Text(
-          '20+ yıllık lüks perakende deneyimi ile Louis Vuitton, Gucci ve Bulgari gibi dünya devi markaların Türkiye pazarında büyümesine liderlik ettim. Harvard Business School eğitimi ve küresel marka yönetimi deneyimimle, Şebo Ajans\'ı kurarak bu bilgi birikimini dijital dünyaya taşıyorum.',
+          '20+ yıllık lüks perakende deneyimi ile Louis Vuitton, Gucci ve Bulgari gibi dünya devi markaların Türkiye pazarında büyümesine liderlik ettim. Harvard Business School eğitimi ve küresel marka yönetimi deneyimimle, Ajans Hoş İşler\'ı kurarak bu bilgi birikimini dijital dünyaya taşıyorum.',
           style: AppTypography.bodyLarge.copyWith(
             color: const Color(0xFF4A4A4A),
             height: 1.6,
@@ -2327,7 +2327,7 @@ class _HomePageState extends ConsumerState<HomePage>
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Şebo Ajans Hikayesi',
+          'Ajans Hoş İşler Hikayesi',
           style: AppTypography.h3.copyWith(
             color: const Color(0xFF2C2C2C),
             fontWeight: FontWeight.w700,
@@ -2349,7 +2349,7 @@ class _HomePageState extends ConsumerState<HomePage>
         const SizedBox(height: 20),
 
         Text(
-          '20+ yıllık lüks perakende deneyimi ile Louis Vuitton, Gucci ve Bulgari gibi dünya devi markaların Türkiye pazarında büyümesine liderlik ettim. Harvard Business School eğitimi ve küresel marka yönetimi deneyimimle, Şebo Ajans\'ı kurarak bu bilgi birikimini dijital dünyaya taşıyorum.',
+          '20+ yıllık lüks perakende deneyimi ile Louis Vuitton, Gucci ve Bulgari gibi dünya devi markaların Türkiye pazarında büyümesine liderlik ettim. Harvard Business School eğitimi ve küresel marka yönetimi deneyimimle, Ajans Hoş İşler\'ı kurarak bu bilgi birikimini dijital dünyaya taşıyorum.',
           style: AppTypography.bodyLarge.copyWith(
             color: const Color(0xFF4A4A4A),
             height: 1.5,
@@ -3464,3 +3464,4 @@ class _BackgroundPatternPainter extends CustomPainter {
 }
 
 // Hoverable Footer Link Widget
+

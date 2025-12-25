@@ -1,6 +1,6 @@
-# 🤖 AI Agent Guidelines - Şebo Agency Project
+﻿# 🤖 AI Agent Guidelines - Ajans Hoş İşler Project
 
-Bu dokümantasyon, Cursor ve diğer AI ajanlarının Şebo Agency Flutter projesinde çalışırken izlemesi gereken kuralları, standartları ve best practices'leri detaylı bir şekilde açıklar.
+Bu dokümantasyon, Cursor ve diğer AI ajanlarının Ajans Hoş İşler Flutter projesinde çalışırken izlemesi gereken kuralları, standartları ve best practices'leri detaylı bir şekilde açıklar.
 
 ## 📋 İçindekiler
 - [Proje Genel Bakış](#proje-genel-bakış)
@@ -16,7 +16,7 @@ Bu dokümantasyon, Cursor ve diğer AI ajanlarının Şebo Agency Flutter projes
 ## 🎯 Proje Genel Bakış
 
 ### Proje Kimliği
-- **Proje Adı**: Şebo Agency - Creative Agency Flutter App
+- **Proje Adı**: Ajans Hoş İşler - Creative Agency Flutter App
 - **Marka**: Lüks markaların Türkiye'deki stratejik ortağı
 - **Hedef**: Premium, profesyonel, responsive Flutter uygulaması
 - **Platform**: iOS, Android, Web
@@ -1599,6 +1599,7 @@ Text(
 
 **Son Güncelleme**: 2024
 **Versiyon**: 1.0.0
-**Geliştirici**: Şebo Agency Team
+**Geliştirici**: Ajans Hoş İşler Team
 
 **Not**: Bu dokümantasyon, AI ajanlarının projede çalışırken izlemesi gereken tüm kuralları ve standartları içerir. Her değişiklik öncesi bu rehberi okuyup kurallara uygun hareket edin.
+

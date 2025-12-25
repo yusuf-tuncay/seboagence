@@ -1,6 +1,6 @@
-# 🚀 Şebo Agency - Geliştirme Yol Haritası
+﻿# 🚀 Ajans Hoş İşler - Geliştirme Yol Haritası
 
-Bu dokümantasyon, Şebo Agency Flutter uygulamasının geliştirme süreçlerini, aşamalarını ve izlenmesi gereken yol haritasını detaylı bir şekilde açıklar.
+Bu dokümantasyon, Ajans Hoş İşler Flutter uygulamasının geliştirme süreçlerini, aşamalarını ve izlenmesi gereken yol haritasını detaylı bir şekilde açıklar.
 
 ## 📋 İçindekiler
 - [Proje Genel Bakış](#proje-genel-bakış)
@@ -14,7 +14,7 @@ Bu dokümantasyon, Şebo Agency Flutter uygulamasının geliştirme süreçlerin
 ## 🎯 Proje Genel Bakış
 
 ### Proje Amacı
-Şebo Agency, lüks markaların Türkiye'deki stratejik ortağı olarak hizmet veren bir creative agency'nin dijital varlığını temsil eden modern, responsive ve profesyonel bir Flutter uygulamasıdır.
+Ajans Hoş İşler, lüks markaların Türkiye'deki stratejik ortağı olarak hizmet veren bir creative agency'nin dijital varlığını temsil eden modern, responsive ve profesyonel bir Flutter uygulamasıdır.
 
 ### Hedef Kitle
 - Lüks marka yöneticileri
@@ -46,7 +46,7 @@ Bu dokümantasyon, Şebo Agency Flutter uygulamasının geliştirme süreçlerin
 - [ ] **Backend Entegrasyonu**: API stratejisinin belirlenmesi
 
 #### 1.3 Tasarım Sistemi
-- [ ] **Brand Identity**: Şebo Agency marka kimliğinin analizi
+- [ ] **Brand Identity**: Ajans Hoş İşler marka kimliğinin analizi
 - [ ] **Color Palette**: Renk paletinin belirlenmesi
 - [ ] **Typography**: Font seçimi ve hiyerarşi
 - [ ] **Component Library**: UI bileşenlerinin tasarımı
@@ -500,4 +500,5 @@ dev_dependencies:
 
 **Son Güncelleme**: 2024
 **Versiyon**: 1.0.0
-**Geliştirici**: Şebo Agency Team
+**Geliştirici**: Ajans Hoş İşler Team
+

@@ -1,4 +1,4 @@
-/// ℹ️ Ultra-Optimized About Page - Hakkımızda sayfası
+﻿/// ℹ️ Ultra-Optimized About Page - Hakkımızda sayfası
 ///
 /// Bu sayfa, ajans hakkında profesyonel ve kompakt bilgileri gösterir.
 library;
@@ -93,7 +93,7 @@ class _HeroSection extends StatelessWidget {
 
           // Alt başlık
           Text(
-            'L’Agence Şebo — Hoş İşler Platformu',
+            'Ajans Hoş İşler — Hoş İşler Platformu',
             style: TextStyle(
               color: Branding.white.withValues(alpha: 0.9),
               fontSize: isMobile
@@ -110,7 +110,7 @@ class _HeroSection extends StatelessWidget {
 
           // Açıklama
           Text(
-            'L’Agence Şebo; kim olduğumuzu, ne iş yaptığımızı ve neden çalıştığımızı açıkça anlatan bir ajanstır.\n\nHoş İşler adını verdiğimiz bir platformumuz var ve üç ana bölümden oluşuyor: Şifa, Vefa, Sefa. Şifa bölümünde özellikle Hatay\'da yetişen Barış İpeği üzerinden yürüttüğümüz “Şifa İpek” projesiyle; deprem sonrası köylerde kadın çiftçilerin tezgâhlarında dokudukları ürünlerin gerçek değere dönüştürülmesine katkı sağlıyoruz. Vefa; Alanya\'da ailemden kalan kız meslek lisesi ve turizm otelcilik okulu öğrencilerine destek ile Alanya odaklı projeleri kapsıyor. Sefa ise Şifa İpeği ile üretilen keyifli ürünlerden oluşan bir seriyi ifade ediyor.\n\nYurt dışı konferans, görüşme ve konuşmalarımızı da bu çatı altında düzenli olarak paylaşıyoruz; böylece yaptığımız işleri ve etkisini şeffaf biçimde görünür kılıyoruz.',
+            'Ajans Hoş İşler; kim olduğumuzu, ne iş yaptığımızı ve neden çalıştığımızı açıkça anlatan bir ajanstır.\n\nHoş İşler adını verdiğimiz bir platformumuz var ve üç ana bölümden oluşuyor: Şifa, Vefa, Sefa. Şifa bölümünde özellikle Hatay\'da yetişen Barış İpeği üzerinden yürüttüğümüz “Şifa İpek” projesiyle; deprem sonrası köylerde kadın çiftçilerin tezgâhlarında dokudukları ürünlerin gerçek değere dönüştürülmesine katkı sağlıyoruz. Vefa; Alanya\'da ailemden kalan kız meslek lisesi ve turizm otelcilik okulu öğrencilerine destek ile Alanya odaklı projeleri kapsıyor. Sefa ise Şifa İpeği ile üretilen keyifli ürünlerden oluşan bir seriyi ifade ediyor.\n\nYurt dışı konferans, görüşme ve konuşmalarımızı da bu çatı altında düzenli olarak paylaşıyoruz; böylece yaptığımız işleri ve etkisini şeffaf biçimde görünür kılıyoruz.',
             style: TextStyle(
               color: Branding.white.withValues(alpha: 0.8),
               fontSize: isMobile ? 16.0 : 18.0,
@@ -265,7 +265,7 @@ class _MissionVisionSection extends StatelessWidget {
           ),
           SizedBox(height: Branding.spacingS),
           Text(
-            'L’Agence Şebo\'yu; yerel değerleri küresel sahnede doğru anlatan, etkisi ölçülebilir projelerle anılan bir yapı olarak büyütmek. \nHoş İşler ağını genişleterek Şifa/Şifa İpek, Vefa ve Sefa başlıklarında daha fazla iyi işe aracılık etmek.',
+            'Ajans Hoş İşler\'yu; yerel değerleri küresel sahnede doğru anlatan, etkisi ölçülebilir projelerle anılan bir yapı olarak büyütmek. \nHoş İşler ağını genişleterek Şifa/Şifa İpek, Vefa ve Sefa başlıklarında daha fazla iyi işe aracılık etmek.',
             style: TextStyle(
               color: Branding.white.withValues(alpha: 0.8),
               fontSize: 14.0,
@@ -531,7 +531,7 @@ class _AchievementsSection extends StatelessWidget {
         children: [
           // Header
           Text(
-            'Neden Şebo? – Yaklaşımımız ve Farkımız',
+            'Neden Ajans Hoş İşler? – Yaklaşımımız ve Farkımız',
             style: TextStyle(
               color: Branding.white,
               fontSize: isMobile ? 28.0 : 36.0,
@@ -543,7 +543,7 @@ class _AchievementsSection extends StatelessWidget {
 
           SizedBox(height: Branding.spacingS),
           Text(
-            'L’Agence Şebo olarak; rakamdan çok değere odaklanırız.\nHer iş aynı disiplinle yürür: strateji → tasarım → üretim → ölçüm.',
+            'Ajans Hoş İşler olarak; rakamdan çok değere odaklanırız.\nHer iş aynı disiplinle yürür: strateji → tasarım → üretim → ölçüm.',
             style: TextStyle(
               color: Branding.white.withValues(alpha: 0.75),
               fontSize: isMobile ? 14.0 : 16.0,
@@ -781,7 +781,7 @@ class _TeamSection extends StatelessWidget {
         SizedBox(height: Branding.spacingL),
         _buildTeamCard(
           context,
-          name: 'Şebo Ekibi',
+          name: 'Ajans Hoş İşler Ekibi',
           role: 'Uzman Takım',
           description:
               'Web tasarım, mobil uygulama geliştirme ve dijital pazarlama alanlarında uzmanlaşmış deneyimli profesyoneller.',
@@ -807,7 +807,7 @@ class _TeamSection extends StatelessWidget {
         Expanded(
           child: _buildTeamCard(
             context,
-            name: 'Şebo Ekibi',
+            name: 'Ajans Hoş İşler Ekibi',
             role: 'Yaratıcı Takım',
             description: 'Tasarım ve geliştirme uzmanları',
             color: Branding.secondary,
@@ -833,7 +833,7 @@ class _TeamSection extends StatelessWidget {
         Expanded(
           child: _buildTeamCard(
             context,
-            name: 'Şebo Ekibi',
+            name: 'Ajans Hoş İşler Ekibi',
             role: 'Yaratıcı Takım',
             description: 'Tasarım ve geliştirme uzmanları',
             color: Branding.secondary,
@@ -1620,7 +1620,7 @@ class _FooterWidget extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            '© 2024 Şebo Agence. Tüm hakları saklıdır.',
+            '© 2024 Ajans Hoş İşler. Tüm hakları saklıdır.',
             textAlign: TextAlign.center,
             style: AppTypography.bodySmall.copyWith(
               color: const Color(0xFF808080),
@@ -1651,7 +1651,7 @@ class _FooterWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            '© 2024 Şebo Agence. Tüm hakları saklıdır.',
+            '© 2024 Ajans Hoş İşler. Tüm hakları saklıdır.',
             style: AppTypography.bodySmall.copyWith(
               color: const Color(0xFF808080),
               fontSize: 9,
@@ -1679,7 +1679,7 @@ class _FooterWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            '© 2024 Şebo Agence. Tüm hakları saklıdır.',
+            '© 2024 Ajans Hoş İşler. Tüm hakları saklıdır.',
             style: AppTypography.bodySmall.copyWith(
               color: const Color(0xFF808080),
               fontSize: 10,
@@ -1742,3 +1742,4 @@ class _HoverableFooterLinkState extends State<_HoverableFooterLink> {
     );
   }
 }
+

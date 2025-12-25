@@ -1,4 +1,4 @@
-/// 🎨 SEFA Projesi Detay Sayfası
+﻿/// 🎨 SEFA Projesi Detay Sayfası
 ///
 /// Bu sayfa, SEFA projesinin detaylarını gösterir.
 /// Mor ve beyaz renk teması kullanılır.
@@ -851,7 +851,7 @@ class _FooterWidget extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            '© 2024 Şebo Agence. Tüm hakları saklıdır.',
+            '© 2024 Ajans Hoş İşler. Tüm hakları saklıdır.',
             textAlign: TextAlign.center,
             style: AppTypography.bodySmall.copyWith(
               color: const Color(0xFF808080),
@@ -882,7 +882,7 @@ class _FooterWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            '© 2024 Şebo Agence. Tüm hakları saklıdır.',
+            '© 2024 Ajans Hoş İşler. Tüm hakları saklıdır.',
             style: AppTypography.bodySmall.copyWith(
               color: const Color(0xFF808080),
               fontSize: 9,
@@ -910,7 +910,7 @@ class _FooterWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            '© 2024 Şebo Agence. Tüm hakları saklıdır.',
+            '© 2024 Ajans Hoş İşler. Tüm hakları saklıdır.',
             style: AppTypography.bodySmall.copyWith(
               color: const Color(0xFF808080),
               fontSize: 10,
@@ -1431,3 +1431,4 @@ class _SefaImageItem extends StatelessWidget {
     );
   }
 }
+

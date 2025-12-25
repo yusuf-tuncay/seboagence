@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 
-/// L’Agence Şebo marka kimliği ve renk paleti
+/// Ajans Hoş İşler marka kimliği ve renk paleti
 class Branding {
   // Renk Paleti - Kurumsal Renkler
   static const Color primaryColor = Color(0xFF1A237E); // Deep navy blue
@@ -136,3 +136,4 @@ class Branding {
     BoxShadow(color: Color(0x1A000000), offset: Offset(0, 8), blurRadius: 16),
   ];
 }
+

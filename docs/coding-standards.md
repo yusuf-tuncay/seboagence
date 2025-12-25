@@ -1,6 +1,6 @@
-# 📝 Şebo Agency - Kod Standartları
+﻿# 📝 Ajans Hoş İşler - Kod Standartları
 
-Bu dokümantasyon, Şebo Agency Flutter uygulaması için kod yazım kuralları, best practices ve standartları detaylı bir şekilde açıklar.
+Bu dokümantasyon, Ajans Hoş İşler Flutter uygulaması için kod yazım kuralları, best practices ve standartları detaylı bir şekilde açıklar.
 
 ## 📋 İçindekiler
 - [Genel Prensipler](#genel-prensipler)
@@ -529,7 +529,7 @@ class ProjectCard extends StatelessWidget {
 ```dart
 // ✅ Doğru sabit isimlendirme
 class AppConstants {
-  static const String appName = 'Şebo Agency';
+  static const String appName = 'Ajans Hoş İşler';
   static const String apiBaseUrl = 'https://api.seboagency.com';
   static const int maxRetryAttempts = 3;
   static const Duration requestTimeout = Duration(seconds: 30);
@@ -769,7 +769,7 @@ void main() {
   group('App Integration Tests', () {
     testWidgets('user can navigate through all pages', (tester) async {
       // Arrange
-      await tester.pumpWidget(const SeboApp());
+      await tester.pumpWidget(const AjansHosIslerApp());
       
       // Act & Assert - Home page
       expect(find.text('ŞEBNEM YÜCEER'), findsOneWidget);
@@ -875,4 +875,6 @@ Eğer UI değişikliği varsa, önce/sonra ekran görüntüleri.
 
 **Son Güncelleme**: 2024
 **Versiyon**: 1.0.0
-**Geliştirici**: Şebo Agency Team
+**Geliştirici**: Ajans Hoş İşler Team
+
+

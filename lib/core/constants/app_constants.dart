@@ -1,10 +1,10 @@
-/// 📱 App Constants - Uygulama sabitleri
+﻿/// 📱 App Constants - Uygulama sabitleri
 ///
 /// Bu dosya, uygulama genelinde kullanılan sabit değerleri içerir.
 /// ASLA hardcoded değerler kullanma, buradan al!
 class AppConstants {
   // Uygulama Bilgileri
-  static const String appName = 'Şebo Agency';
+  static const String appName = 'Ajans Hoş İşler';
   static const String appVersion = '1.0.0';
   static const String appDescription =
       'Lüks Markaların Türkiye\'deki Stratejik Ortağı';
@@ -78,3 +78,4 @@ class AppConstants {
   // Private constructor - Bu sınıf instantiate edilemez
   AppConstants._();
 }
+

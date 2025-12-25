@@ -1,4 +1,4 @@
-import 'dart:developer' as developer;
+﻿import 'dart:developer' as developer;
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -29,19 +29,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SeboAgencyApp();
+    return const AjansHosIslerApp();
   }
 }
 
-class SeboAgencyApp extends ConsumerWidget {
-  const SeboAgencyApp({super.key});
+class AjansHosIslerApp extends ConsumerWidget {
+  const AjansHosIslerApp({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final themeMode = ref.watch(themeModeProvider);
 
     return MaterialApp(
-      title: 'L’Agence Şebo',
+      title: 'Ajans Hoş İşler',
       debugShowCheckedModeBanner: false,
       navigatorKey: NavigationService.navigatorKey,
       home: const HomePage(),
@@ -75,3 +75,5 @@ class SeboAgencyApp extends ConsumerWidget {
     );
   }
 }
+
+

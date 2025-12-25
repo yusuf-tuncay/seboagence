@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'branding.dart';
 
-/// L’Agence Şebo tipografi sistemi
+/// Ajans Hoş İşler tipografi sistemi
 class AppTypography {
   // Başlık Stilleri
   static const TextStyle displayLarge = TextStyle(
@@ -279,3 +279,4 @@ class AppTypography {
     }
   }
 }
+

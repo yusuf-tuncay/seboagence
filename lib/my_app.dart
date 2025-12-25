@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import '../../core/theme/branding.dart';
 import '../../core/theme/typography.dart';
 import '../../core/utils/responsive.dart';
@@ -57,7 +57,7 @@ class MyAppPageView extends StatelessWidget {
         ),
         const SizedBox(height: Branding.spacingL),
         Text(
-          'L’Agence Şebo Web Uygulaması',
+          'Ajans Hoş İşler Web Uygulaması',
           style: AppTypography.h4.copyWith(
             color: Branding.white.withValues(alpha: 0.9),
             fontSize: 18,
@@ -79,7 +79,7 @@ class MyAppPageView extends StatelessWidget {
         ),
         const SizedBox(height: Branding.spacingL),
         Text(
-          'L’Agence Şebo Web Uygulaması',
+          'Ajans Hoş İşler Web Uygulaması',
           style: AppTypography.h4.copyWith(
             color: Branding.white.withValues(alpha: 0.9),
             fontSize: 20,
@@ -101,7 +101,7 @@ class MyAppPageView extends StatelessWidget {
         ),
         const SizedBox(height: Branding.spacingL),
         Text(
-          'L’Agence Şebo Web Uygulaması',
+          'Ajans Hoş İşler Web Uygulaması',
           style: AppTypography.h4.copyWith(
             color: Branding.white.withValues(alpha: 0.9),
             fontSize: 24,
@@ -389,3 +389,4 @@ class MyAppPageView extends StatelessWidget {
     );
   }
 }
+

@@ -1,6 +1,6 @@
-# 📚 Şebo Agency - Geliştirme Dokümantasyonu
+﻿# 📚 Ajans Hoş İşler - Geliştirme Dokümantasyonu
 
-Bu klasör, Şebo Agency Flutter uygulamasının geliştirme süreçlerini, mimarisini ve yol haritasını detaylı bir şekilde açıklar.
+Bu klasör, Ajans Hoş İşler Flutter uygulamasının geliştirme süreçlerini, mimarisini ve yol haritasını detaylı bir şekilde açıklar.
 
 ## 📋 İçindekiler
 
@@ -53,4 +53,5 @@ Herhangi bir sorunuz için:
 
 **Son Güncelleme**: 2024
 **Versiyon**: 1.0.0
-**Geliştirici**: Şebo Agency Team
+**Geliştirici**: Ajans Hoş İşler Team
+

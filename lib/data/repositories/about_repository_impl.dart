@@ -1,4 +1,4 @@
-/// ℹ️ About Repository Implementation - Hakkımızda repository implementasyonu
+﻿/// ℹ️ About Repository Implementation - Hakkımızda repository implementasyonu
 ///
 /// Bu sınıf, hakkımızda verilerini yönetir.
 library;
@@ -11,7 +11,7 @@ class AboutRepositoryImpl implements AboutRepository {
   // Mock data - gerçek uygulamada API'den gelecek
   static final AboutModel _mockAbout = AboutModel(
     id: '1',
-    title: 'L’Agence Şebo',
+    title: 'Ajans Hoş İşler',
     description: 'Yaratıcı ve yenilikçi çözümler sunan dijital ajans',
     imageUrl: 'https://via.placeholder.com/600x400',
     mission: 'Müşterilerimize en iyi dijital deneyimi sunmak',
@@ -40,6 +40,7 @@ class AboutRepositoryImpl implements AboutRepository {
     // Gerçek uygulamada API'den yeni veriler çekilecek
   }
 }
+
 
 
 

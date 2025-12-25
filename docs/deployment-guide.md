@@ -1,6 +1,6 @@
-# 🚀 Şebo Agency - Deployment Rehberi
+﻿# 🚀 Ajans Hoş İşler - Deployment Rehberi
 
-Bu dokümantasyon, Şebo Agency Flutter uygulamasının production ortamına çıkış süreçlerini, konfigürasyonlarını ve best practices'lerini detaylı bir şekilde açıklar.
+Bu dokümantasyon, Ajans Hoş İşler Flutter uygulamasının production ortamına çıkış süreçlerini, konfigürasyonlarını ve best practices'lerini detaylı bir şekilde açıklar.
 
 ## 📋 İçindekiler
 - [Deployment Genel Bakış](#deployment-genel-bakış)
@@ -133,7 +133,7 @@ end
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Şebo Agency</title>
+  <title>Ajans Hoş İşler</title>
   
   <!-- Performance optimizations -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -501,13 +501,13 @@ class Environment {
   static String get appName {
     switch (_environment) {
       case 'development':
-        return 'Şebo Agency (Dev)';
+        return 'Ajans Hoş İşler (Dev)';
       case 'staging':
-        return 'Şebo Agency (Staging)';
+        return 'Ajans Hoş İşler (Staging)';
       case 'production':
-        return 'Şebo Agency';
+        return 'Ajans Hoş İşler';
       default:
-        return 'Şebo Agency (Dev)';
+        return 'Ajans Hoş İşler (Dev)';
     }
   }
 }
@@ -560,7 +560,7 @@ def getApiBaseUrl() {
 // ios/Runner/Config.xcconfig
 ENVIRONMENT = development
 API_BASE_URL = https://dev-api.seboagency.com
-APP_NAME = Şebo Agency (Dev)
+APP_NAME = Ajans Hoş İşler (Dev)
 ```
 
 ## 📊 Monitoring & Analytics
@@ -734,4 +734,5 @@ CachedNetworkImage(
 
 **Son Güncelleme**: 2024
 **Versiyon**: 1.0.0
-**Geliştirici**: Şebo Agency Team
+**Geliştirici**: Ajans Hoş İşler Team
+

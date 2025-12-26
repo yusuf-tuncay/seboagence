@@ -100,6 +100,7 @@ class _AboutPageContentState extends State<_AboutPageContent> {
           _OpenIdeasSection(applyCardKey: _applyCardKey, headerKey: _openIdeasHeaderKey),
           _MissionVisionSection(),
           _AchievementsSection(),
+          _ManifestoSection(),
           _TeamSection(),
           const FooterWidget(),
         ],
@@ -1064,6 +1065,93 @@ class _AchievementsSection extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
         ],
+      ),
+    );
+  }
+}
+
+/// Philanthropy Manifesto Section
+class _ManifestoSection extends StatelessWidget {
+  const _ManifestoSection();
+
+  @override
+  Widget build(BuildContext context) {
+    final isMobile = Responsive.isMobile(context);
+
+    return Container(
+      width: double.infinity,
+      padding: EdgeInsets.symmetric(
+        horizontal: isMobile ? Branding.spacingM : Branding.spacingXXL,
+        vertical: isMobile ? Branding.spacingL : Branding.spacingXXL,
+      ),
+      decoration: BoxDecoration(
+        color: Branding.white.withValues(alpha: 0.04),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Text(
+            'Şebnem Yüceer – Philanthropy Manifestosu',
+            style: TextStyle(
+              color: Branding.white,
+              fontSize: isMobile ? 22.0 : 28.0,
+              fontWeight: FontWeight.w700,
+            ),
+            textAlign: TextAlign.center,
+          ),
+          SizedBox(height: isMobile ? Branding.spacingS : Branding.spacingM),
+          Text(
+            'Philanthropy, benim için bir bağış biçimi değil; sorumluluk ve emanet bilincidir.',
+            style: TextStyle(
+              color: Branding.white.withValues(alpha: 0.75),
+              fontSize: isMobile ? 13.0 : 15.0,
+              height: 1.6,
+            ),
+            textAlign: TextAlign.center,
+          ),
+          SizedBox(height: isMobile ? Branding.spacingL : Branding.spacingXL),
+          _buildManifestoLine(
+            context,
+            '1. Niyetim — bağımlılık değil, kabiliyet; geçici destek değil, kalıcı yapı.',
+          ),
+          _buildManifestoLine(
+            context,
+            '2. Odak alanım — kadın emeği, kültürel miras, yerel değerlerin evrensel dili.',
+          ),
+          _buildManifestoLine(
+            context,
+            '3. Yaklaşımım — sessiz ama derin, zarif ama kararlı, yerel ama evrensel.',
+          ),
+          _buildManifestoLine(
+            context,
+            '4. Süreklilik — kişi değil, değer merkezli; bugünü değil yarını ayakta tutan yapılar.',
+          ),
+          _buildManifestoLine(
+            context,
+            '5. Etik duruş — alkıştan çok iz, yardımdan çok onur, isimden çok etki.',
+          ),
+          _buildManifestoLine(
+            context,
+            '6. Miras — sahip olunan değil, geleceğe emanet edilen bir değer.',
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildManifestoLine(BuildContext context, String text) {
+    final isMobile = Responsive.isMobile(context);
+
+    return Padding(
+      padding: EdgeInsets.only(bottom: isMobile ? Branding.spacingS : Branding.spacingM),
+      child: Text(
+        text,
+        style: TextStyle(
+          color: Branding.white.withValues(alpha: 0.85),
+          fontSize: isMobile ? 13.0 : 15.0,
+          height: 1.6,
+        ),
+        textAlign: TextAlign.center,
       ),
     );
   }

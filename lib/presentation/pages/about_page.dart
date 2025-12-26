@@ -42,7 +42,6 @@ class _AboutPageContent extends StatelessWidget {
           _HeroSection(),
           _OpenIdeasSection(),
           _MissionVisionSection(),
-          _ValuesSection(),
           _AchievementsSection(),
           _TeamSection(),
           const FooterWidget(),
@@ -490,8 +489,8 @@ class _HeroSection extends StatelessWidget {
               fontSize: isMobile
                   ? 36.0
                   : isTablet
-                  ? 48.0
-                  : 64.0,
+                      ? 48.0
+                      : 64.0,
               fontWeight: FontWeight.w800,
               letterSpacing: -1.0,
             ),
@@ -501,14 +500,14 @@ class _HeroSection extends StatelessWidget {
 
           // Alt başlık
           Text(
-            'Ajans Hoş İşler — Hoş İşler Platformu',
+            'Ajans Hoş İşler — seçilmiş işlerin bir araya geldiği sakin bir alan',
             style: TextStyle(
               color: Branding.white.withValues(alpha: 0.9),
               fontSize: isMobile
                   ? 18.0
                   : isTablet
-                  ? 22.0
-                  : 28.0,
+                      ? 22.0
+                      : 28.0,
               fontWeight: FontWeight.w400,
               height: 1.4,
             ),
@@ -518,7 +517,20 @@ class _HeroSection extends StatelessWidget {
 
           // Açıklama
           Text(
-            'Ajans Hoş İşler; kim olduğumuzu, ne iş yaptığımızı ve neden çalıştığımızı açıkça anlatan bir ajanstır.\n\nHoş İşler adını verdiğimiz bir platformumuz var ve üç ana bölümden oluşuyor: Şifa, Vefa, Sefa. Şifa bölümünde özellikle Hatay\'da yetişen Barış İpeği üzerinden yürüttüğümüz “Şifa İpek” projesiyle; deprem sonrası köylerde kadın çiftçilerin tezgâhlarında dokudukları ürünlerin gerçek değere dönüştürülmesine katkı sağlıyoruz. Vefa; Alanya\'da ailemden kalan kız meslek lisesi ve turizm otelcilik okulu öğrencilerine destek ile Alanya odaklı projeleri kapsıyor. Sefa ise Şifa İpeği ile üretilen keyifli ürünlerden oluşan bir seriyi ifade ediyor.\n\nYurt dışı konferans, görüşme ve konuşmalarımızı da bu çatı altında düzenli olarak paylaşıyoruz; böylece yaptığımız işleri ve etkisini şeffaf biçimde görünür kılıyoruz.',
+            'Ajans Hoş İşler; değer yarattığına inandığımız işleri, özenli bir '
+            'seçkiyle bir araya getirir. Bu yaklaşım bir hizmet satma iddiası '
+            'taşımaz; doğru işleri doğru bağlamda buluşturan sakin bir alan açar.\n\n'
+            'Hoş İşler adını verdiğimiz seçki üç ana başlıktan oluşuyor: Şifa, '
+            'Vefa, Sefa. Şifa bölümünde özellikle Hatay\'da yetişen Barış İpeği '
+            'üzerinden yürüttüğümüz "Şifa İpek" projesiyle; deprem sonrası '
+            'köylerde kadın çiftçilerin tezgâhlarında dokudukları ürünlerin '
+            'gerçek değere dönüşmesine katkı sağlıyoruz. Vefa; Alanya\'da ailemden '
+            'kalan kız meslek lisesi ve turizm otelcilik okulu öğrencilerine destek '
+            'ile Alanya odaklı projeleri kapsıyor. Sefa ise Şifa İpeği ile üretilen '
+            'keyifli ürünlerden oluşan bir seriyi ifade ediyor.\n\n'
+            'Yurt dışı konferans, görüşme ve konuşmalarımızı da bu çatı altında '
+            'düzenli olarak paylaşıyoruz; böylece yaptığımız işleri ve etkisini '
+            'şeffaf biçimde görünür kılıyoruz.',
             style: TextStyle(
               color: Branding.white.withValues(alpha: 0.8),
               fontSize: isMobile ? 16.0 : 18.0,
@@ -698,239 +710,6 @@ class _MissionVisionSection extends StatelessWidget {
   }
 }
 
-/// Values Section
-class _ValuesSection extends StatelessWidget {
-  const _ValuesSection();
-
-  @override
-  Widget build(BuildContext context) {
-    final isMobile = Responsive.isMobile(context);
-
-    return Container(
-      width: double.infinity,
-      padding: EdgeInsets.all(
-        isMobile ? Branding.spacingL : Branding.spacingXXL,
-      ),
-      decoration: BoxDecoration(color: Branding.white.withValues(alpha: 0.05)),
-      child: Column(
-        children: [
-          Text(
-            'Değerlerimiz',
-            style: TextStyle(
-              color: Branding.white,
-              fontSize: isMobile ? 28.0 : 36.0,
-              fontWeight: FontWeight.w700,
-            ),
-            textAlign: TextAlign.center,
-          ),
-          SizedBox(height: Branding.spacingS),
-          Text(
-            'İş yapış şeklimizi belirleyen temel değerlerimiz',
-            style: TextStyle(
-              color: Branding.white.withValues(alpha: 0.7),
-              fontSize: isMobile ? 16.0 : 18.0,
-              fontWeight: FontWeight.w400,
-            ),
-            textAlign: TextAlign.center,
-          ),
-          SizedBox(height: Branding.spacingXL),
-
-          Responsive.responsiveWidget(
-            context,
-            mobile: _buildMobileValues(context),
-            tablet: _buildTabletValues(context),
-            desktop: _buildDesktopValues(context),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildMobileValues(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        _buildValueCard(
-          context,
-          icon: Icons.lightbulb,
-          title: 'Yaratıcılık',
-          description:
-              'Yerel değerleri güçlü hikâye anlatımıyla görünür kılar; her projede özgün ve etkileyici tasarımlar üretiriz.',
-          color: Branding.primary,
-        ),
-        SizedBox(height: Branding.spacingL),
-        _buildValueCard(
-          context,
-          icon: Icons.star,
-          title: 'Kalite',
-          description:
-              'Süreç ve çıktıları standartlaştırırız; iş hedefleriyle uyumlu, ölçülebilir ve sürdürülebilir kaliteyi esas alırız.',
-          color: Branding.secondary,
-        ),
-        SizedBox(height: Branding.spacingL),
-        _buildValueCard(
-          context,
-          icon: Icons.security,
-          title: 'Güvenilirlik',
-          description:
-              'Şeffaf iletişim, zamanında teslim ve Hoş İşler altında düzenli paylaşım ile kalıcı güven inşa ederiz.',
-          color: Branding.secondary,
-        ),
-        SizedBox(height: Branding.spacingL),
-        _buildValueCard(
-          context,
-          icon: Icons.trending_up,
-          title: 'İnovasyon',
-          description:
-              'Alanlar arası işbirliği ve yeni formatlarla yenilik getirir; veriye dayalı iyileştirme ile büyütürüz.',
-          color: Branding.primary,
-        ),
-      ],
-    );
-  }
-
-  Widget _buildTabletValues(BuildContext context) {
-    return GridView(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        mainAxisSpacing: Branding.spacingL,
-        crossAxisSpacing: Branding.spacingL,
-        childAspectRatio: 1.4,
-      ),
-      children: [
-        _buildValueCard(
-          context,
-          icon: Icons.lightbulb,
-          title: 'Yaratıcılık',
-          description: 'Yerel değerleri güçlü hikâyelerle görünür kılarız',
-          color: Branding.primary,
-        ),
-        _buildValueCard(
-          context,
-          icon: Icons.star,
-          title: 'Kalite',
-          description: 'Standartlaştırılmış süreç ve ölçülebilir çıktı',
-          color: Branding.secondary,
-        ),
-        _buildValueCard(
-          context,
-          icon: Icons.security,
-          title: 'Güvenilirlik',
-          description: 'Şeffaf paylaşım ve zamanında teslim',
-          color: Branding.secondary,
-        ),
-        _buildValueCard(
-          context,
-          icon: Icons.trending_up,
-          title: 'İnovasyon',
-          description: 'Alanlar arası işbirliği, veriye dayalı büyüme',
-          color: Branding.primary,
-        ),
-      ],
-    );
-  }
-
-  Widget _buildDesktopValues(BuildContext context) {
-    return GridView(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 4,
-        mainAxisSpacing: Branding.spacingL,
-        crossAxisSpacing: Branding.spacingL,
-        childAspectRatio: 1.5,
-      ),
-      children: [
-        _buildValueCard(
-          context,
-          icon: Icons.lightbulb,
-          title: 'Yaratıcılık',
-          description: 'Yerel değerleri güçlü hikâyelerle görünür kılarız',
-          color: Branding.primary,
-        ),
-        _buildValueCard(
-          context,
-          icon: Icons.star,
-          title: 'Kalite',
-          description: 'Standartlaştırılmış süreç ve ölçülebilir çıktı',
-          color: Branding.secondary,
-        ),
-        _buildValueCard(
-          context,
-          icon: Icons.security,
-          title: 'Güvenilirlik',
-          description: 'Şeffaf paylaşım ve zamanında teslim',
-          color: Branding.secondary,
-        ),
-        _buildValueCard(
-          context,
-          icon: Icons.trending_up,
-          title: 'İnovasyon',
-          description: 'Alanlar arası işbirliği, veriye dayalı büyüme',
-          color: Branding.primary,
-        ),
-      ],
-    );
-  }
-
-  Widget _buildValueCard(
-    BuildContext context, {
-    required IconData icon,
-    required String title,
-    required String description,
-    required Color color,
-  }) {
-    final isMobile = Responsive.isMobile(context);
-    return Container(
-      width: double.infinity,
-      padding: EdgeInsets.all(isMobile ? Branding.spacingL : Branding.spacingXL),
-      decoration: BoxDecoration(
-        color: Branding.white.withValues(alpha: 0.1),
-        borderRadius: BorderRadius.circular(Branding.borderRadiusL),
-        border: Border.all(
-          color: Branding.white.withValues(alpha: 0.2),
-          width: 1,
-        ),
-      ),
-      child: Column(
-        children: [
-          Container(
-            padding: EdgeInsets.all(isMobile ? Branding.spacingS : Branding.spacingL),
-            decoration: BoxDecoration(
-              color: color.withValues(alpha: 0.2),
-              borderRadius: BorderRadius.circular(Branding.borderRadiusM),
-            ),
-            child: Icon(icon, color: Branding.white, size: isMobile ? 22.0 : 32.0),
-          ),
-          SizedBox(height: Branding.spacingL),
-          Text(
-            title,
-            style: TextStyle(
-              color: Branding.white,
-              fontSize: isMobile ? 16.0 : 20.0,
-              fontWeight: FontWeight.w700,
-            ),
-            textAlign: TextAlign.center,
-          ),
-          SizedBox(height: Branding.spacingS),
-          Text(
-            description,
-            style: TextStyle(
-              color: Branding.white.withValues(alpha: 0.75),
-              fontSize: isMobile ? 12.0 : 14.0,
-              fontWeight: FontWeight.w400,
-              height: 1.4,
-            ),
-            textAlign: TextAlign.center,
-          ),
-        ],
-      ),
-    );
-  }
-}
-
 /// Achievements Section - Minimal Design
 class _AchievementsSection extends StatelessWidget {
   const _AchievementsSection();
@@ -949,7 +728,7 @@ class _AchievementsSection extends StatelessWidget {
         children: [
           // Header
           Text(
-            'Neden Ajans Hoş İşler? – Yaklaşımımız ve Farkımız',
+            'Neden Ajans Hoş İşler? – Seçici ve Sakin Bir Yaklaşım',
             style: TextStyle(
               color: Branding.white,
               fontSize: isMobile ? 28.0 : 36.0,
@@ -961,7 +740,9 @@ class _AchievementsSection extends StatelessWidget {
 
           SizedBox(height: Branding.spacingS),
           Text(
-            'Ajans Hoş İşler olarak; rakamdan çok değere odaklanırız.\nHer iş aynı disiplinle yürür: strateji → tasarım → üretim → ölçüm.',
+            'Ajans Hoş İşler; seçilmiş ve anlamlı işleri, bilinçli bir kürasyonla '
+            'bir araya getirir. Her şey herkese açık bir pazar değil; özenli bir '
+            'seçki ve sakin bir buluşma alanıdır.',
             style: TextStyle(
               color: Branding.white.withValues(alpha: 0.75),
               fontSize: isMobile ? 14.0 : 16.0,
@@ -994,7 +775,7 @@ class _AchievementsSection extends StatelessWidget {
                 Icon(Icons.format_quote, color: Branding.white.withValues(alpha: 0.7)),
                 SizedBox(height: Branding.spacingS),
                 Text(
-                  '“Ölçemediğin şeyi geliştiremezsin.”\nHer projeyi net hedeflerle başlatır; çıktıları Hoş İşler çatısı altında şeffafça paylaşırız.',
+                  '"İyi işler paylaşıldıkça çoğalır."\nBu alanı sakin, insani ve seçici bir dikkatle yürütürüz.',
                   style: TextStyle(
                     color: Branding.white.withValues(alpha: 0.9),
                     fontSize: isMobile ? 14.0 : 16.0,
@@ -1009,6 +790,7 @@ class _AchievementsSection extends StatelessWidget {
       ),
     );
   }
+
   // New content builders
   Widget _buildMobileWhyUs(BuildContext context) {
     return Column(
@@ -1016,28 +798,28 @@ class _AchievementsSection extends StatelessWidget {
       children: [
         _buildWhyUsCard(
           context,
-          icon: Icons.route,
-          title: 'Strateji Odaklı',
+          icon: Icons.public,
+          title: 'Seçici Kürasyon',
           description:
-              'Kim olduğumuzu ve ne amaçladığımızı netleştirir; hedef kitle, mesaj ve kanalları stratejiyle belirleriz.',
+              'Değer yarattığına inandığımız işleri seçer, özenli bir seçki oluştururuz.',
           color: Branding.primary,
         ),
         SizedBox(height: Branding.spacingL),
         _buildWhyUsCard(
           context,
           icon: Icons.volunteer_activism,
-          title: 'Hoş İşler Etkisi',
+          title: 'Bağlayıcı Rol',
           description:
-              'Şifa/Şifa İpek, Vefa ve Sefa ile yerel değerleri görünür kılar; toplumsal faydayı projelerin merkezine koyarız.',
+              'Doğru işleri doğru kişilerle bir araya getirir; bağ kurmayı önemseriz.',
           color: Branding.secondary,
         ),
         SizedBox(height: Branding.spacingL),
         _buildWhyUsCard(
           context,
-          icon: Icons.public,
-          title: 'Küresel Paylaşım',
+          icon: Icons.email_outlined,
+          title: 'Dönemsel Çağrı',
           description:
-              'Konferans, görüşme ve konuşmaları düzenli olarak yayımlar; etki ve öğrenimleri şeffaf biçimde paylaşırız.',
+              'Başvuruları dönemsel çağrılarla alır, uygun projelere geri döneriz.',
           color: Branding.primary,
         ),
       ],
@@ -1050,10 +832,10 @@ class _AchievementsSection extends StatelessWidget {
         Expanded(
           child: _buildWhyUsCard(
             context,
-            icon: Icons.route,
-            title: 'Strateji Odaklı',
+            icon: Icons.public,
+            title: 'Seçici Kürasyon',
             description:
-                'Hedef kitle, mesaj ve kanalları netleştirip işe stratejiyle başlarız.',
+                'Seçkiyi sade ve açık bir dille görünür kılarız.',
             color: Branding.primary,
           ),
         ),
@@ -1061,10 +843,10 @@ class _AchievementsSection extends StatelessWidget {
         Expanded(
           child: _buildWhyUsCard(
             context,
-            icon: Icons.design_services,
-            title: 'Uçtan Uca Üretim',
+            icon: Icons.volunteer_activism,
+            title: 'Bağlayıcı Rol',
             description:
-                'Tasarım, geliştirme, içerik ve reklam yönetimini tek çatıda toplarız.',
+                'Doğru işleri doğru bağlamda bir araya getirmeyi amaçlarız.',
             color: Branding.secondary,
           ),
         ),
@@ -1072,10 +854,10 @@ class _AchievementsSection extends StatelessWidget {
         Expanded(
           child: _buildWhyUsCard(
             context,
-            icon: Icons.analytics_outlined,
-            title: 'Ölçülebilir Sonuç',
+            icon: Icons.email_outlined,
+            title: 'Dönemsel Çağrı',
             description:
-                'Raporlar ve KPI’larla görünür değer üretir, iş hedefini büyütürüz.',
+                'Başvuruları dönemsel alır, düzenli geri dönüş yaparız.',
             color: Branding.primary,
           ),
         ),
@@ -1191,7 +973,7 @@ class _TeamSection extends StatelessWidget {
         _buildTeamCard(
           context,
           name: 'Şebo Yüceer',
-          role: 'Kurucu & CEO',
+          role: 'Kurucu / Küratör',
           description:
               'Dijital pazarlama stratejisti ve proje yöneticisi. 5+ yıllık sektör deneyimi ile müşteri odaklı çözümler geliştiriyor.',
           color: Branding.primary,
@@ -1216,7 +998,7 @@ class _TeamSection extends StatelessWidget {
           child: _buildTeamCard(
             context,
             name: 'Şebo Yüceer',
-            role: 'Kurucu & CEO',
+            role: 'Kurucu / Küratör',
             description: 'Dijital strateji ve yönetim uzmanı',
             color: Branding.primary,
           ),
@@ -1242,7 +1024,7 @@ class _TeamSection extends StatelessWidget {
           child: _buildTeamCard(
             context,
             name: 'Şebo Yüceer',
-            role: 'Kurucu & CEO',
+            role: 'Kurucu / Küratör',
             description: 'Dijital strateji ve yönetim uzmanı',
             color: Branding.primary,
           ),
@@ -2160,4 +1942,23 @@ class _HoverableFooterLinkState extends State<_HoverableFooterLink> {
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

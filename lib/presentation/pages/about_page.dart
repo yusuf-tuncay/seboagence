@@ -4,6 +4,7 @@
 library;
 
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -473,6 +474,17 @@ class _OpenIdeasSection extends StatelessWidget {
 
     return TextButton(
       onPressed: () async {
+        final Uri gmailWebUri = Uri.parse(
+          'https://mail.google.com/mail/?view=cm&fs=1&to=${AppConstants.companyEmail}&su=Açık Fikirler Başvurusu',
+        );
+
+        if (kIsWeb) {
+          if (await canLaunchUrl(gmailWebUri)) {
+            await launchUrl(gmailWebUri);
+          }
+          return;
+        }
+
         if (isMobile) {
           final Uri gmailUri = Uri(
             scheme: 'gmail',
@@ -496,10 +508,6 @@ class _OpenIdeasSection extends StatelessWidget {
             await launchUrl(emailUri);
           }
         } else {
-          final Uri gmailWebUri = Uri.parse(
-            'https://mail.google.com/mail/?view=cm&fs=1&to=${AppConstants.companyEmail}&su=Açık Fikirler Başvurusu',
-          );
-
           if (await canLaunchUrl(gmailWebUri)) {
             await launchUrl(gmailWebUri);
           }
@@ -564,15 +572,13 @@ class _OpenIdeasSection extends StatelessWidget {
             ),
           ),
           SizedBox(height: Branding.spacingS),
-          Expanded(
-            child: Text(
-              description,
-              style: TextStyle(
-                color: Branding.white.withValues(alpha: 0.8),
-                fontSize: 14.0,
-                fontWeight: FontWeight.w400,
-                height: 1.5,
-              ),
+          Text(
+            description,
+            style: TextStyle(
+              color: Branding.white.withValues(alpha: 0.8),
+              fontSize: 14.0,
+              fontWeight: FontWeight.w400,
+              height: 1.5,
             ),
           ),
           if (action != null) ...[
@@ -770,8 +776,7 @@ class _MissionVisionSection extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           SizedBox(height: Branding.spacingS),
-          Expanded(
-            child: Text(
+          Text(
               'Biz; anlamlı, fayda üreten ve toplumsal değeri olan projeleri görünür kılmak için varız.\nStrateji → tasarım → üretim → ölçüm döngüsüyle işlerimizi uçtan uca yönetir; Hoş İşler platformu (Şifa/Şifa İpek, Vefa, Sefa) üzerinden hikâyeleri kalıcı etkiye dönüştürürüz.',
               style: TextStyle(
                 color: Branding.white.withValues(alpha: 0.8),
@@ -781,7 +786,6 @@ class _MissionVisionSection extends StatelessWidget {
               ),
               textAlign: TextAlign.center,
             ),
-          ),
         ],
       ),
     );
@@ -823,8 +827,7 @@ class _MissionVisionSection extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           SizedBox(height: Branding.spacingS),
-          Expanded(
-            child: Text(
+          Text(
             'Ajans Hoş İşler\'yu; yerel değerleri küresel sahnede doğru anlatan, etkisi ölçülebilir projelerle anılan bir yapı olarak büyütmek. \nHoş İşler ağını genişleterek Şifa/Şifa İpek, Vefa ve Sefa başlıklarında daha fazla iyi işe aracılık etmek.',
               style: TextStyle(
                 color: Branding.white.withValues(alpha: 0.8),
@@ -834,7 +837,6 @@ class _MissionVisionSection extends StatelessWidget {
               ),
               textAlign: TextAlign.center,
             ),
-          ),
         ],
       ),
     );
@@ -2073,6 +2075,7 @@ class _HoverableFooterLinkState extends State<_HoverableFooterLink> {
     );
   }
 }
+
 
 
 

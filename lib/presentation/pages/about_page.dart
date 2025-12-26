@@ -121,7 +121,7 @@ class _OpenIdeasSection extends StatelessWidget {
     return Container(
       width: double.infinity,
       padding: EdgeInsets.all(
-        isMobile ? Branding.spacingL : Branding.spacingXXL,
+        isMobile ? Branding.spacingM : Branding.spacingXXL,
       ),
       decoration: BoxDecoration(color: Branding.white.withValues(alpha: 0.05)),
       child: Column(
@@ -131,7 +131,7 @@ class _OpenIdeasSection extends StatelessWidget {
             'Açık Fikirler Platformu',
             style: TextStyle(
               color: Branding.white,
-              fontSize: isMobile ? 28.0 : 36.0,
+              fontSize: isMobile ? 24.0 : 36.0,
               fontWeight: FontWeight.w700,
             ),
             textAlign: TextAlign.center,
@@ -146,20 +146,20 @@ class _OpenIdeasSection extends StatelessWidget {
             'ilerliyoruz.',
             style: TextStyle(
               color: Branding.white.withValues(alpha: 0.7),
-              fontSize: isMobile ? 16.0 : 18.0,
+              fontSize: isMobile ? 14.0 : 18.0,
               fontWeight: FontWeight.w400,
               height: 1.5,
             ),
             textAlign: TextAlign.center,
           ),
-          SizedBox(height: Branding.spacingXL),
+          SizedBox(height: isMobile ? Branding.spacingL : Branding.spacingXL),
           Responsive.responsiveWidget(
             context,
             mobile: _buildMobileCards(context, applyCardKey),
             tablet: _buildTabletCards(context, applyCardKey),
             desktop: _buildDesktopCards(context, applyCardKey),
           ),
-          SizedBox(height: Branding.spacingXL),
+          SizedBox(height: isMobile ? Branding.spacingL : Branding.spacingXL),
           _buildProcessScopeSection(context),
         ],
       ),
@@ -175,7 +175,7 @@ class _OpenIdeasSection extends StatelessWidget {
           'Süreç ve Kapsam',
           style: TextStyle(
             color: Branding.white,
-            fontSize: isMobile ? 22.0 : 28.0,
+            fontSize: isMobile ? 20.0 : 28.0,
             fontWeight: FontWeight.w700,
           ),
           textAlign: TextAlign.center,
@@ -185,12 +185,12 @@ class _OpenIdeasSection extends StatelessWidget {
           'Başvuru akışı ve platforma uygunluk kriterleri.',
           style: TextStyle(
             color: Branding.white.withValues(alpha: 0.7),
-            fontSize: isMobile ? 14.0 : 16.0,
+            fontSize: isMobile ? 13.0 : 16.0,
             fontWeight: FontWeight.w400,
           ),
           textAlign: TextAlign.center,
         ),
-        SizedBox(height: Branding.spacingL),
+        SizedBox(height: isMobile ? Branding.spacingM : Branding.spacingL),
         Responsive.responsiveWidget(
           context,
           mobile: _buildMobileProcessScopeCards(),
@@ -212,18 +212,20 @@ class _OpenIdeasSection extends StatelessWidget {
               '1) E-posta ile kısa başvuru\n'
               '2) Ön değerlendirme\n'
               '3) Geri dönüş ve tanıştırma',
+          compact: true,
           color: Branding.secondary,
         ),
-        SizedBox(height: Branding.spacingL),
+        SizedBox(height: Branding.spacingM),
         _buildOpenIdeaCard(
           icon: Icons.rule,
           title: 'Kapsama Girmeyenler',
           description:
               'Salt ticari tanıtım, spekülatif vaatler veya doğrulanamayan '
               'etki iddiaları olan projeleri bu alana almıyoruz.',
+          compact: true,
           color: Branding.primary,
         ),
-        SizedBox(height: Branding.spacingL),
+        SizedBox(height: Branding.spacingM),
         _buildOpenIdeaCard(
           icon: Icons.note_alt_outlined,
           title: 'Örnek Paylaşım Formatı',
@@ -233,6 +235,7 @@ class _OpenIdeasSection extends StatelessWidget {
               'Etki: Hedeflenen çıktı\n'
               'Ekip: Kimler var\n'
               'Link/Görsel: Varsa',
+          compact: true,
           color: Branding.secondary,
         ),
       ],
@@ -344,9 +347,10 @@ class _OpenIdeasSection extends StatelessWidget {
           description:
               'Hoş işler kategorisine girebilecek projeleri görünür kılmak '
               've ilgilenenleri doğru işlerle buluşturmak.',
+          compact: true,
           color: Branding.primary,
         ),
-        SizedBox(height: Branding.spacingL),
+        SizedBox(height: Branding.spacingM),
         _buildOpenIdeaCard(
           cardKey: applyCardKey,
                   icon: Icons.email_outlined,
@@ -356,9 +360,10 @@ class _OpenIdeasSection extends StatelessWidget {
               '${AppConstants.companyEmail} adresine e-posta gönderin. '
               'Konu: "Açık Fikirler Başvurusu".',
           action: _buildApplyEmailButton(context),
+          compact: true,
           color: Branding.secondary,
         ),
-        SizedBox(height: Branding.spacingL),
+        SizedBox(height: Branding.spacingM),
         _buildOpenIdeaCard(
           icon: Icons.description_outlined,
           title: 'Ne Paylaşılır',
@@ -367,6 +372,7 @@ class _OpenIdeasSection extends StatelessWidget {
               '- Etki/katkı hedefi\n'
               '- Ekip veya kuruluş bilgisi\n'
               '- Varsa görsel/link',
+          compact: true,
           color: Branding.primary,
         ),
       ],
@@ -539,10 +545,21 @@ class _OpenIdeasSection extends StatelessWidget {
     required String description,
     Widget? action,
     required Color color,
+    bool compact = false,
   }) {
+    final double cardPadding =
+        compact ? Branding.spacingL : Branding.spacingXL;
+    final double iconPadding =
+        compact ? Branding.spacingS : Branding.spacingM;
+    final double iconSize = compact ? 24.0 : 28.0;
+    final double titleSize = compact ? 16.0 : 18.0;
+    final double bodySize = compact ? 13.0 : 14.0;
+    final double gapM = compact ? Branding.spacingS : Branding.spacingM;
+    final double gapS = compact ? Branding.spacingXS : Branding.spacingS;
+
     return Container(
       key: cardKey,
-      padding: EdgeInsets.all(Branding.spacingXL),
+      padding: EdgeInsets.all(cardPadding),
       decoration: BoxDecoration(
         color: Branding.white.withValues(alpha: 0.08),
         borderRadius: BorderRadius.circular(Branding.borderRadiusL),
@@ -555,34 +572,34 @@ class _OpenIdeasSection extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            padding: const EdgeInsets.all(Branding.spacingM),
+            padding: EdgeInsets.all(iconPadding),
             decoration: BoxDecoration(
               color: color.withValues(alpha: 0.2),
               borderRadius: BorderRadius.circular(Branding.borderRadiusM),
             ),
-            child: Icon(icon, color: Branding.white, size: 28.0),
+            child: Icon(icon, color: Branding.white, size: iconSize),
           ),
-          SizedBox(height: Branding.spacingM),
+          SizedBox(height: gapM),
           Text(
             title,
-            style: const TextStyle(
+            style: TextStyle(
               color: Branding.white,
-              fontSize: 18.0,
+              fontSize: titleSize,
               fontWeight: FontWeight.w700,
             ),
           ),
-          SizedBox(height: Branding.spacingS),
+          SizedBox(height: gapS),
           Text(
             description,
             style: TextStyle(
               color: Branding.white.withValues(alpha: 0.8),
-              fontSize: 14.0,
+              fontSize: bodySize,
               fontWeight: FontWeight.w400,
               height: 1.5,
             ),
           ),
           if (action != null) ...[
-            SizedBox(height: Branding.spacingM),
+            SizedBox(height: gapM),
             Align(
               alignment: Alignment.center,
               child: action!,
@@ -606,8 +623,8 @@ class _HeroSection extends StatelessWidget {
     return Container(
       width: double.infinity,
       padding: EdgeInsets.symmetric(
-        horizontal: isMobile ? Branding.spacingL : Branding.spacingXXL,
-        vertical: isMobile ? Branding.spacingXL : Branding.spacingXXL * 2,
+        horizontal: isMobile ? Branding.spacingM : Branding.spacingXXL,
+        vertical: isMobile ? Branding.spacingM : Branding.spacingXXL * 2,
       ),
       decoration: const BoxDecoration(
         gradient: LinearGradient(
@@ -624,7 +641,7 @@ class _HeroSection extends StatelessWidget {
             style: TextStyle(
               color: Branding.white,
               fontSize: isMobile
-                  ? 36.0
+                  ? 30.0
                   : isTablet
                       ? 48.0
                       : 64.0,
@@ -633,7 +650,7 @@ class _HeroSection extends StatelessWidget {
             ),
             textAlign: TextAlign.center,
           ),
-          SizedBox(height: isMobile ? Branding.spacingM : Branding.spacingL),
+          SizedBox(height: isMobile ? Branding.spacingS : Branding.spacingL),
 
           // Alt başlık
           Text(
@@ -641,7 +658,7 @@ class _HeroSection extends StatelessWidget {
             style: TextStyle(
               color: Branding.white.withValues(alpha: 0.9),
               fontSize: isMobile
-                  ? 18.0
+                  ? 16.0
                   : isTablet
                       ? 22.0
                       : 28.0,
@@ -650,7 +667,7 @@ class _HeroSection extends StatelessWidget {
             ),
             textAlign: TextAlign.center,
           ),
-          SizedBox(height: isMobile ? Branding.spacingXL : Branding.spacingXXL),
+          SizedBox(height: isMobile ? Branding.spacingM : Branding.spacingXXL),
 
           // Açıklama
           Text(
@@ -670,7 +687,7 @@ class _HeroSection extends StatelessWidget {
             'şeffaf biçimde görünür kılıyoruz.',
             style: TextStyle(
               color: Branding.white.withValues(alpha: 0.8),
-              fontSize: isMobile ? 16.0 : 18.0,
+              fontSize: isMobile ? 14.0 : 18.0,
               fontWeight: FontWeight.w400,
               height: 1.6,
             ),
@@ -693,7 +710,7 @@ class _MissionVisionSection extends StatelessWidget {
     return Container(
       width: double.infinity,
       padding: EdgeInsets.all(
-        isMobile ? Branding.spacingL : Branding.spacingXXL,
+        isMobile ? Branding.spacingM : Branding.spacingXXL,
       ),
       child: Responsive.responsiveWidget(
         context,
@@ -854,8 +871,8 @@ class _AchievementsSection extends StatelessWidget {
     return Container(
       width: double.infinity,
       padding: EdgeInsets.symmetric(
-        horizontal: isMobile ? Branding.spacingL : Branding.spacingXXL,
-        vertical: isMobile ? Branding.spacingXL : Branding.spacingXXL * 1.5,
+        horizontal: isMobile ? Branding.spacingM : Branding.spacingXXL,
+        vertical: isMobile ? Branding.spacingL : Branding.spacingXXL * 1.5,
       ),
       child: Column(
         children: [
@@ -864,7 +881,7 @@ class _AchievementsSection extends StatelessWidget {
             'Neden Ajans Hoş İşler? – Seçici ve Sakin Bir Yaklaşım',
             style: TextStyle(
               color: Branding.white,
-              fontSize: isMobile ? 28.0 : 36.0,
+              fontSize: isMobile ? 24.0 : 36.0,
               fontWeight: FontWeight.w700,
             ),
             textAlign: TextAlign.center,
@@ -878,7 +895,7 @@ class _AchievementsSection extends StatelessWidget {
             'seçki ve sakin bir buluşma alanıdır.',
             style: TextStyle(
               color: Branding.white.withValues(alpha: 0.75),
-              fontSize: isMobile ? 14.0 : 16.0,
+              fontSize: isMobile ? 13.0 : 16.0,
               height: 1.6,
             ),
             textAlign: TextAlign.center,
@@ -911,7 +928,7 @@ class _AchievementsSection extends StatelessWidget {
                   '"İyi işler paylaşıldıkça çoğalır."\nBu alanı sakin, insani ve seçici bir dikkatle yürütürüz.',
                   style: TextStyle(
                     color: Branding.white.withValues(alpha: 0.9),
-                    fontSize: isMobile ? 14.0 : 16.0,
+                    fontSize: isMobile ? 13.0 : 16.0,
                     height: 1.6,
                   ),
                   textAlign: TextAlign.center,
@@ -1032,7 +1049,7 @@ class _AchievementsSection extends StatelessWidget {
             title,
             style: TextStyle(
               color: Branding.white,
-              fontSize: isMobile ? 16.0 : 18.0,
+              fontSize: isMobile ? 14.0 : 18.0,
               fontWeight: FontWeight.w700,
             ),
           ),
@@ -1063,7 +1080,7 @@ class _TeamSection extends StatelessWidget {
     return Container(
       width: double.infinity,
       padding: EdgeInsets.all(
-        isMobile ? Branding.spacingL : Branding.spacingXXL,
+        isMobile ? Branding.spacingM : Branding.spacingXXL,
       ),
       decoration: BoxDecoration(color: Branding.white.withValues(alpha: 0.05)),
       child: Column(
@@ -1072,7 +1089,7 @@ class _TeamSection extends StatelessWidget {
             'Ekibimiz',
             style: TextStyle(
               color: Branding.white,
-              fontSize: isMobile ? 28.0 : 36.0,
+              fontSize: isMobile ? 24.0 : 36.0,
               fontWeight: FontWeight.w700,
             ),
             textAlign: TextAlign.center,
@@ -1082,12 +1099,12 @@ class _TeamSection extends StatelessWidget {
             'Uzman kadromuzla size en iyi hizmeti sunuyoruz',
             style: TextStyle(
               color: Branding.white.withValues(alpha: 0.7),
-              fontSize: isMobile ? 16.0 : 18.0,
+              fontSize: isMobile ? 14.0 : 18.0,
               fontWeight: FontWeight.w400,
             ),
             textAlign: TextAlign.center,
           ),
-          SizedBox(height: Branding.spacingXL),
+          SizedBox(height: isMobile ? Branding.spacingL : Branding.spacingXL),
 
           Responsive.responsiveWidget(
             context,
@@ -2075,6 +2092,7 @@ class _HoverableFooterLinkState extends State<_HoverableFooterLink> {
     );
   }
 }
+
 
 
 

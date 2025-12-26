@@ -6,6 +6,7 @@ library;
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../../core/constants/app_constants.dart';
 import '../../core/theme/branding.dart';
 import '../../core/theme/typography.dart';
@@ -153,9 +154,9 @@ class _OpenIdeasSection extends StatelessWidget {
           SizedBox(height: Branding.spacingXL),
           Responsive.responsiveWidget(
             context,
-            mobile: _buildMobileCards(applyCardKey),
-            tablet: _buildTabletCards(applyCardKey),
-            desktop: _buildDesktopCards(applyCardKey),
+            mobile: _buildMobileCards(context, applyCardKey),
+            tablet: _buildTabletCards(context, applyCardKey),
+            desktop: _buildDesktopCards(context, applyCardKey),
           ),
           SizedBox(height: Branding.spacingXL),
           _buildProcessScopeSection(context),
@@ -332,7 +333,7 @@ class _OpenIdeasSection extends StatelessWidget {
     );
   }
 
-  Widget _buildMobileCards(GlobalKey applyCardKey) {
+  Widget _buildMobileCards(BuildContext context, GlobalKey applyCardKey) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -353,6 +354,7 @@ class _OpenIdeasSection extends StatelessWidget {
               'Kısa bir proje özeti, amaç ve ihtiyaçlarınızla birlikte '
               '${AppConstants.companyEmail} adresine e-posta gönderin. '
               'Konu: "Açık Fikirler Başvurusu".',
+          action: _buildApplyEmailButton(context),
           color: Branding.secondary,
         ),
         SizedBox(height: Branding.spacingL),
@@ -370,7 +372,7 @@ class _OpenIdeasSection extends StatelessWidget {
     );
   }
 
-  Widget _buildTabletCards(GlobalKey applyCardKey) {
+  Widget _buildTabletCards(BuildContext context, GlobalKey applyCardKey) {
     return Column(
       children: [
         IntrinsicHeight(
@@ -397,6 +399,7 @@ class _OpenIdeasSection extends StatelessWidget {
                       'Kısa bir proje özeti, amaç ve ihtiyaçlarınızla birlikte '
                       '${AppConstants.companyEmail} adresine e-posta gönderin. '
                       'Konu: "Açık Fikirler Başvurusu".',
+          action: _buildApplyEmailButton(context),
                   color: Branding.secondary,
                 ),
               ),
@@ -418,7 +421,7 @@ class _OpenIdeasSection extends StatelessWidget {
     );
   }
 
-  Widget _buildDesktopCards(GlobalKey applyCardKey) {
+  Widget _buildDesktopCards(BuildContext context, GlobalKey applyCardKey) {
     return IntrinsicHeight(
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -443,6 +446,7 @@ class _OpenIdeasSection extends StatelessWidget {
                   'Kısa bir proje özeti, amaç ve ihtiyaçlarınızla birlikte '
                   '${AppConstants.companyEmail} adresine e-posta gönderin. '
                   'Konu: "Açık Fikirler Başvurusu".',
+          action: _buildApplyEmailButton(context),
               color: Branding.secondary,
             ),
           ),
@@ -464,12 +468,68 @@ class _OpenIdeasSection extends StatelessWidget {
     );
   }
 
+  Widget _buildApplyEmailButton(BuildContext context) {
+    final isMobile = Responsive.isMobile(context);
+
+    return TextButton(
+      onPressed: () async {
+        if (isMobile) {
+          final Uri gmailUri = Uri(
+            scheme: 'gmail',
+            path: 'co',
+            query:
+                'to=${AppConstants.companyEmail}&subject=Açık Fikirler Başvurusu',
+          );
+
+          if (await canLaunchUrl(gmailUri)) {
+            await launchUrl(gmailUri);
+            return;
+          }
+
+          final Uri emailUri = Uri(
+            scheme: 'mailto',
+            path: AppConstants.companyEmail,
+            query: 'subject=Açık Fikirler Başvurusu',
+          );
+
+          if (await canLaunchUrl(emailUri)) {
+            await launchUrl(emailUri);
+          }
+        } else {
+          final Uri gmailWebUri = Uri.parse(
+            'https://mail.google.com/mail/?view=cm&fs=1&to=${AppConstants.companyEmail}&su=Açık Fikirler Başvurusu',
+          );
+
+          if (await canLaunchUrl(gmailWebUri)) {
+            await launchUrl(gmailWebUri);
+          }
+        }
+      },
+      style: TextButton.styleFrom(
+        foregroundColor: Branding.white,
+        textStyle: const TextStyle(
+          fontSize: 13.0,
+          fontWeight: FontWeight.w600,
+        ),
+        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16.0),
+          side: BorderSide(
+            color: Branding.white.withValues(alpha: 0.4),
+          ),
+        ),
+      ),
+      child: const Text('Başvuru için E-posta Gönder'),
+    );
+  }
+
   Widget _buildOpenIdeaCard({
     Key? cardKey,
 
     required IconData icon,
     required String title,
     required String description,
+    Widget? action,
     required Color color,
   }) {
     return Container(
@@ -515,6 +575,13 @@ class _OpenIdeasSection extends StatelessWidget {
               ),
             ),
           ),
+          if (action != null) ...[
+            SizedBox(height: Branding.spacingM),
+            Align(
+              alignment: Alignment.center,
+              child: action!,
+            ),
+          ],
         ],
       ),
     );
@@ -2006,6 +2073,9 @@ class _HoverableFooterLinkState extends State<_HoverableFooterLink> {
     );
   }
 }
+
+
+
 
 
 

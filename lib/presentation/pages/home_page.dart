@@ -543,7 +543,7 @@ class _HomePageState extends ConsumerState<HomePage>
           ),
         ),
         child: Text(
-          'İsterseniz yazın',
+          'Hemen İletişime Geç',
           style: AppTypography.button.copyWith(
             color: const Color(0xFF4A4A4A), // Medium grey
             fontSize: 12,
@@ -568,7 +568,7 @@ class _HomePageState extends ConsumerState<HomePage>
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       ),
       child: Text(
-        'Seçkiyi Gör',
+        'Projelerimizi İncele',
         style: AppTypography.button.copyWith(
           color: const Color(0xFFE0E0E0), // Light grey
           fontSize: 12,
@@ -604,7 +604,7 @@ class _HomePageState extends ConsumerState<HomePage>
           ),
         ),
         child: Text(
-          'İsterseniz yazın',
+          'Hemen İletişime Geç',
           style: AppTypography.button.copyWith(
             color: const Color(0xFF4A4A4A), // Medium grey
             fontSize: 14,
@@ -629,7 +629,7 @@ class _HomePageState extends ConsumerState<HomePage>
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       ),
       child: Text(
-        'Seçkiyi Gör',
+        'Projelerimizi İncele',
         style: AppTypography.button.copyWith(
           color: const Color(0xFFE0E0E0), // Light grey
           fontSize: 14,
@@ -665,7 +665,7 @@ class _HomePageState extends ConsumerState<HomePage>
           ),
         ),
         child: Text(
-          'İsterseniz yazın',
+          'Hemen İletişime Geç',
           style: AppTypography.button.copyWith(
             color: const Color(0xFF4A4A4A), // Medium grey
             fontSize: 14,
@@ -690,7 +690,7 @@ class _HomePageState extends ConsumerState<HomePage>
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       ),
       child: Text(
-        'Seçkiyi Gör',
+        'Projelerimizi İncele',
         style: AppTypography.button.copyWith(
           color: const Color(0xFFE0E0E0), // Light grey
           fontSize: 14,
@@ -868,11 +868,11 @@ class _HomePageState extends ConsumerState<HomePage>
       style: TextButton.styleFrom(
         foregroundColor: const Color(0xFF2C2C2C),
         textStyle: AppTypography.bodySmall.copyWith(
-          fontSize: fontSize + 1,
+          fontSize: fontSize + 3,
           fontWeight: FontWeight.w600,
         ),
-        padding: const EdgeInsets.symmetric(horizontal: 22.0, vertical: 12.0),
-        minimumSize: const Size(0, 40),
+        padding: const EdgeInsets.symmetric(horizontal: 28.0, vertical: 16.0),
+        minimumSize: const Size(0, 48),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(24.0),
           side: BorderSide(
@@ -3532,6 +3532,9 @@ class _BackgroundPatternPainter extends CustomPainter {
 }
 
 // Hoverable Footer Link Widget
+
+
+
 
 
 

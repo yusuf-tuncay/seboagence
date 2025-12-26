@@ -5,6 +5,7 @@ library;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../../core/constants/app_constants.dart';
 import '../../core/theme/branding.dart';
 import '../../core/theme/typography.dart';
 import '../../core/utils/responsive.dart';
@@ -39,11 +40,418 @@ class _AboutPageContent extends StatelessWidget {
       child: Column(
         children: [
           _HeroSection(),
+          _OpenIdeasSection(),
           _MissionVisionSection(),
           _ValuesSection(),
           _AchievementsSection(),
           _TeamSection(),
           const FooterWidget(),
+        ],
+      ),
+    );
+  }
+}
+
+/// Açık Fikirler Platformu Section
+class _OpenIdeasSection extends StatelessWidget {
+  const _OpenIdeasSection();
+
+  @override
+  Widget build(BuildContext context) {
+    final isMobile = Responsive.isMobile(context);
+
+    return Container(
+      width: double.infinity,
+      padding: EdgeInsets.all(
+        isMobile ? Branding.spacingL : Branding.spacingXXL,
+      ),
+      decoration: BoxDecoration(color: Branding.white.withValues(alpha: 0.05)),
+      child: Column(
+        children: [
+          Text(
+            'Açık Fikirler Platformu',
+            style: TextStyle(
+              color: Branding.white,
+              fontSize: isMobile ? 28.0 : 36.0,
+              fontWeight: FontWeight.w700,
+            ),
+            textAlign: TextAlign.center,
+          ),
+          SizedBox(height: Branding.spacingS),
+          Text(
+            'Ajans Hoş İşler, kendi geliştirdiğimiz ve desteklediğimiz '
+            'işlerin ötesinde; hoş işler kategorisine girebilecek farklı '
+            'projeleri de görünür kılan bir açık fikirler platformudur. '
+            'Bu alanda, iyi işlere ilgi duyanları doğru projelerle '
+            'tanıştırmayı amaçlıyoruz. Şimdilik dönemsel çağrıyla '
+            'ilerliyoruz.',
+            style: TextStyle(
+              color: Branding.white.withValues(alpha: 0.7),
+              fontSize: isMobile ? 16.0 : 18.0,
+              fontWeight: FontWeight.w400,
+              height: 1.5,
+            ),
+            textAlign: TextAlign.center,
+          ),
+          SizedBox(height: Branding.spacingXL),
+          Responsive.responsiveWidget(
+            context,
+            mobile: _buildMobileCards(),
+            tablet: _buildTabletCards(),
+            desktop: _buildDesktopCards(),
+          ),
+          SizedBox(height: Branding.spacingXL),
+          _buildProcessScopeSection(context),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildProcessScopeSection(BuildContext context) {
+    final isMobile = Responsive.isMobile(context);
+
+    return Column(
+      children: [
+        Text(
+          'Süreç ve Kapsam',
+          style: TextStyle(
+            color: Branding.white,
+            fontSize: isMobile ? 22.0 : 28.0,
+            fontWeight: FontWeight.w700,
+          ),
+          textAlign: TextAlign.center,
+        ),
+        SizedBox(height: Branding.spacingS),
+        Text(
+          'Başvuru akışı ve platforma uygunluk kriterleri.',
+          style: TextStyle(
+            color: Branding.white.withValues(alpha: 0.7),
+            fontSize: isMobile ? 14.0 : 16.0,
+            fontWeight: FontWeight.w400,
+          ),
+          textAlign: TextAlign.center,
+        ),
+        SizedBox(height: Branding.spacingL),
+        Responsive.responsiveWidget(
+          context,
+          mobile: _buildMobileProcessScopeCards(),
+          tablet: _buildTabletProcessScopeCards(),
+          desktop: _buildDesktopProcessScopeCards(),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildMobileProcessScopeCards() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        _buildOpenIdeaCard(
+          icon: Icons.timeline,
+          title: 'Süreç Nasıl İşler',
+          description:
+              '1) E-posta ile kısa başvuru\n'
+              '2) Ön değerlendirme\n'
+              '3) Geri dönüş ve tanıştırma',
+          color: Branding.secondary,
+        ),
+        SizedBox(height: Branding.spacingL),
+        _buildOpenIdeaCard(
+          icon: Icons.rule,
+          title: 'Kapsama Girmeyenler',
+          description:
+              'Salt ticari tanıtım, spekülatif vaatler veya doğrulanamayan '
+              'etki iddiaları olan projeleri bu alana almıyoruz.',
+          color: Branding.primary,
+        ),
+        SizedBox(height: Branding.spacingL),
+        _buildOpenIdeaCard(
+          icon: Icons.note_alt_outlined,
+          title: 'Örnek Paylaşım Formatı',
+          description:
+              'Başlık: Proje adı\n'
+              'Amaç: Kısa açıklama\n'
+              'Etki: Hedeflenen çıktı\n'
+              'Ekip: Kimler var\n'
+              'Link/Görsel: Varsa',
+          color: Branding.secondary,
+        ),
+      ],
+    );
+  }
+
+  Widget _buildTabletProcessScopeCards() {
+    return Column(
+      children: [
+        IntrinsicHeight(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Expanded(
+                child: _buildOpenIdeaCard(
+                  icon: Icons.timeline,
+                  title: 'Süreç Nasıl İşler',
+                  description:
+                      '1) E-posta ile kısa başvuru\n'
+                      '2) Ön değerlendirme\n'
+                      '3) Geri dönüş ve tanıştırma',
+                  color: Branding.secondary,
+                ),
+              ),
+              SizedBox(width: Branding.spacingL),
+              Expanded(
+                child: _buildOpenIdeaCard(
+                  icon: Icons.rule,
+                  title: 'Kapsama Girmeyenler',
+                  description:
+                      'Salt ticari tanıtım, spekülatif vaatler veya '
+                      'doğrulanamayan etki iddiaları olan projeleri bu alana '
+                      'almıyoruz.',
+                  color: Branding.primary,
+                ),
+              ),
+            ],
+          ),
+        ),
+        SizedBox(height: Branding.spacingL),
+        _buildOpenIdeaCard(
+          icon: Icons.note_alt_outlined,
+          title: 'Örnek Paylaşım Formatı',
+          description:
+              'Başlık: Proje adı\n'
+              'Amaç: Kısa açıklama\n'
+              'Etki: Hedeflenen çıktı\n'
+              'Ekip: Kimler var\n'
+              'Link/Görsel: Varsa',
+          color: Branding.secondary,
+        ),
+      ],
+    );
+  }
+
+  Widget _buildDesktopProcessScopeCards() {
+    return IntrinsicHeight(
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Expanded(
+            child: _buildOpenIdeaCard(
+              icon: Icons.timeline,
+              title: 'Süreç Nasıl İşler',
+              description:
+                  '1) E-posta ile kısa başvuru\n'
+                  '2) Ön değerlendirme\n'
+                  '3) Geri dönüş ve tanıştırma',
+              color: Branding.secondary,
+            ),
+          ),
+          SizedBox(width: Branding.spacingL),
+          Expanded(
+            child: _buildOpenIdeaCard(
+              icon: Icons.rule,
+              title: 'Kapsama Girmeyenler',
+              description:
+                  'Salt ticari tanıtım, spekülatif vaatler veya doğrulanamayan '
+                  'etki iddiaları olan projeleri bu alana almıyoruz.',
+              color: Branding.primary,
+            ),
+          ),
+          SizedBox(width: Branding.spacingL),
+          Expanded(
+            child: _buildOpenIdeaCard(
+              icon: Icons.note_alt_outlined,
+              title: 'Örnek Paylaşım Formatı',
+              description:
+                  'Başlık: Proje adı\n'
+                  'Amaç: Kısa açıklama\n'
+                  'Etki: Hedeflenen çıktı\n'
+                  'Ekip: Kimler var\n'
+                  'Link/Görsel: Varsa',
+              color: Branding.secondary,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildMobileCards() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        _buildOpenIdeaCard(
+          icon: Icons.public,
+          title: 'Neyi Amaçlıyoruz',
+          description:
+              'Hoş işler kategorisine girebilecek projeleri görünür kılmak '
+              've ilgilenenleri doğru işlerle buluşturmak.',
+          color: Branding.primary,
+        ),
+        SizedBox(height: Branding.spacingL),
+        _buildOpenIdeaCard(
+          icon: Icons.email_outlined,
+          title: 'Nasıl Başvurulur',
+          description:
+              'Kısa bir proje özeti, amaç ve ihtiyaçlarınızla birlikte '
+              '${AppConstants.companyEmail} adresine e-posta gönderin. '
+              'Konu: "Açık Fikirler Başvurusu".',
+          color: Branding.secondary,
+        ),
+        SizedBox(height: Branding.spacingL),
+        _buildOpenIdeaCard(
+          icon: Icons.description_outlined,
+          title: 'Ne Paylaşılır',
+          description:
+              '- Proje özeti ve amacı\n'
+              '- Etki/katkı hedefi\n'
+              '- Ekip veya kuruluş bilgisi\n'
+              '- Varsa görsel/link',
+          color: Branding.primary,
+        ),
+      ],
+    );
+  }
+
+  Widget _buildTabletCards() {
+    return Column(
+      children: [
+        IntrinsicHeight(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Expanded(
+                child: _buildOpenIdeaCard(
+                  icon: Icons.public,
+                  title: 'Neyi Amaçlıyoruz',
+                  description:
+                      'Hoş işler kategorisine girebilecek projeleri görünür '
+                      'kılmak ve ilgilenenleri doğru işlerle buluşturmak.',
+                  color: Branding.primary,
+                ),
+              ),
+              SizedBox(width: Branding.spacingL),
+              Expanded(
+                child: _buildOpenIdeaCard(
+                  icon: Icons.email_outlined,
+                  title: 'Nasıl Başvurulur',
+                  description:
+                      'Kısa bir proje özeti, amaç ve ihtiyaçlarınızla birlikte '
+                      '${AppConstants.companyEmail} adresine e-posta gönderin. '
+                      'Konu: "Açık Fikirler Başvurusu".',
+                  color: Branding.secondary,
+                ),
+              ),
+            ],
+          ),
+        ),
+        SizedBox(height: Branding.spacingL),
+        _buildOpenIdeaCard(
+          icon: Icons.description_outlined,
+          title: 'Ne Paylaşılır',
+          description:
+              '- Proje özeti ve amacı\n'
+              '- Etki/katkı hedefi\n'
+              '- Ekip veya kuruluş bilgisi\n'
+              '- Varsa görsel/link',
+          color: Branding.primary,
+        ),
+      ],
+    );
+  }
+
+  Widget _buildDesktopCards() {
+    return IntrinsicHeight(
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Expanded(
+            child: _buildOpenIdeaCard(
+              icon: Icons.public,
+              title: 'Neyi Amaçlıyoruz',
+              description:
+                  'Hoş işler kategorisine girebilecek projeleri görünür kılmak '
+                  've ilgilenenleri doğru işlerle buluşturmak.',
+              color: Branding.primary,
+            ),
+          ),
+          SizedBox(width: Branding.spacingL),
+          Expanded(
+            child: _buildOpenIdeaCard(
+              icon: Icons.email_outlined,
+              title: 'Nasıl Başvurulur',
+              description:
+                  'Kısa bir proje özeti, amaç ve ihtiyaçlarınızla birlikte '
+                  '${AppConstants.companyEmail} adresine e-posta gönderin. '
+                  'Konu: "Açık Fikirler Başvurusu".',
+              color: Branding.secondary,
+            ),
+          ),
+          SizedBox(width: Branding.spacingL),
+          Expanded(
+            child: _buildOpenIdeaCard(
+              icon: Icons.description_outlined,
+              title: 'Ne Paylaşılır',
+              description:
+                  '- Proje özeti ve amacı\n'
+                  '- Etki/katkı hedefi\n'
+                  '- Ekip veya kuruluş bilgisi\n'
+                  '- Varsa görsel/link',
+              color: Branding.primary,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildOpenIdeaCard({
+    required IconData icon,
+    required String title,
+    required String description,
+    required Color color,
+  }) {
+    return Container(
+      padding: EdgeInsets.all(Branding.spacingXL),
+      decoration: BoxDecoration(
+        color: Branding.white.withValues(alpha: 0.08),
+        borderRadius: BorderRadius.circular(Branding.borderRadiusL),
+        border: Border.all(
+          color: Branding.white.withValues(alpha: 0.15),
+          width: 1,
+        ),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            padding: const EdgeInsets.all(Branding.spacingM),
+            decoration: BoxDecoration(
+              color: color.withValues(alpha: 0.2),
+              borderRadius: BorderRadius.circular(Branding.borderRadiusM),
+            ),
+            child: Icon(icon, color: Branding.white, size: 28.0),
+          ),
+          SizedBox(height: Branding.spacingM),
+          Text(
+            title,
+            style: const TextStyle(
+              color: Branding.white,
+              fontSize: 18.0,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+          SizedBox(height: Branding.spacingS),
+          Expanded(
+            child: Text(
+              description,
+              style: TextStyle(
+                color: Branding.white.withValues(alpha: 0.8),
+                fontSize: 14.0,
+                fontWeight: FontWeight.w400,
+                height: 1.5,
+              ),
+            ),
+          ),
         ],
       ),
     );
@@ -160,24 +568,30 @@ class _MissionVisionSection extends StatelessWidget {
   Widget _buildTabletMissionVision() {
     return Column(
       children: [
-        Row(
-          children: [
-            Expanded(child: _buildMissionCard()),
-            SizedBox(width: Branding.spacingL),
-            Expanded(child: _buildVisionCard()),
-          ],
+        IntrinsicHeight(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Expanded(child: _buildMissionCard()),
+              SizedBox(width: Branding.spacingL),
+              Expanded(child: _buildVisionCard()),
+            ],
+          ),
         ),
       ],
     );
   }
 
   Widget _buildDesktopMissionVision() {
-    return Row(
-      children: [
-        Expanded(child: _buildMissionCard()),
-        SizedBox(width: Branding.spacingL),
-        Expanded(child: _buildVisionCard()),
-      ],
+    return IntrinsicHeight(
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Expanded(child: _buildMissionCard()),
+          SizedBox(width: Branding.spacingL),
+          Expanded(child: _buildVisionCard()),
+        ],
+      ),
     );
   }
 
@@ -213,15 +627,17 @@ class _MissionVisionSection extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           SizedBox(height: Branding.spacingS),
-          Text(
-            'Biz; anlamlı, fayda üreten ve toplumsal değeri olan projeleri görünür kılmak için varız.\nStrateji → tasarım → üretim → ölçüm döngüsüyle işlerimizi uçtan uca yönetir; Hoş İşler platformu (Şifa/Şifa İpek, Vefa, Sefa) üzerinden hikâyeleri kalıcı etkiye dönüştürürüz.',
-            style: TextStyle(
-              color: Branding.white.withValues(alpha: 0.8),
-              fontSize: 14.0,
-              fontWeight: FontWeight.w400,
-              height: 1.4,
+          Expanded(
+            child: Text(
+              'Biz; anlamlı, fayda üreten ve toplumsal değeri olan projeleri görünür kılmak için varız.\nStrateji → tasarım → üretim → ölçüm döngüsüyle işlerimizi uçtan uca yönetir; Hoş İşler platformu (Şifa/Şifa İpek, Vefa, Sefa) üzerinden hikâyeleri kalıcı etkiye dönüştürürüz.',
+              style: TextStyle(
+                color: Branding.white.withValues(alpha: 0.8),
+                fontSize: 14.0,
+                fontWeight: FontWeight.w400,
+                height: 1.4,
+              ),
+              textAlign: TextAlign.center,
             ),
-            textAlign: TextAlign.center,
           ),
         ],
       ),
@@ -264,15 +680,17 @@ class _MissionVisionSection extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           SizedBox(height: Branding.spacingS),
-          Text(
-            'Ajans Hoş İşler\'yu; yerel değerleri küresel sahnede doğru anlatan, etkisi ölçülebilir projelerle anılan bir yapı olarak büyütmek. \nHoş İşler ağını genişleterek Şifa/Şifa İpek, Vefa ve Sefa başlıklarında daha fazla iyi işe aracılık etmek.',
-            style: TextStyle(
-              color: Branding.white.withValues(alpha: 0.8),
-              fontSize: 14.0,
-              fontWeight: FontWeight.w400,
-              height: 1.4,
+          Expanded(
+            child: Text(
+              'Ajans Hoş İşler\'yu; yerel değerleri küresel sahnede doğru anlatan, etkisi ölçülebilir projelerle anılan bir yapı olarak büyütmek. \nHoş İşler ağını genişleterek Şifa/Şifa İpek, Vefa ve Sefa başlıklarında daha fazla iyi işe aracılık etmek.',
+              style: TextStyle(
+                color: Branding.white.withValues(alpha: 0.8),
+                fontSize: 14.0,
+                fontWeight: FontWeight.w400,
+                height: 1.4,
+              ),
+              textAlign: TextAlign.center,
             ),
-            textAlign: TextAlign.center,
           ),
         ],
       ),

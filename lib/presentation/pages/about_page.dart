@@ -4,6 +4,7 @@
 library;
 
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/constants/app_constants.dart';
 import '../../core/theme/branding.dart';
@@ -45,6 +46,7 @@ class _AboutPageContent extends StatefulWidget {
 class _AboutPageContentState extends State<_AboutPageContent> {
   final ScrollController _scrollController = ScrollController();
   final GlobalKey _applyCardKey = GlobalKey();
+  final GlobalKey _openIdeasHeaderKey = GlobalKey();
 
   @override
   void initState() {
@@ -52,20 +54,30 @@ class _AboutPageContentState extends State<_AboutPageContent> {
 
     if (widget.scrollToSection == AppConstants.aboutApplyAnchor) {
       WidgetsBinding.instance.addPostFrameCallback((_) {
-        _scrollToApplyCard();
+        _scrollToOpenIdeasHeader();
       });
     }
   }
-
-  void _scrollToApplyCard() {
-    final context = _applyCardKey.currentContext;
+  void _scrollToOpenIdeasHeader() {
+    final context = _openIdeasHeaderKey.currentContext;
     if (context == null) {
       return;
     }
 
-    Scrollable.ensureVisible(
-      context,
-      duration: const Duration(milliseconds: 400),
+    final renderObject = context.findRenderObject();
+    final viewport = RenderAbstractViewport.of(renderObject);
+    if (renderObject == null || viewport == null) {
+      return;
+    }
+
+    const double navOffset = 48.0;
+    final reveal = viewport.getOffsetToReveal(renderObject, 0.0);
+    final target = (reveal.offset - navOffset)
+        .clamp(0.0, _scrollController.position.maxScrollExtent);
+
+    _scrollController.animateTo(
+      target,
+      duration: const Duration(milliseconds: 450),
       curve: Curves.easeOutCubic,
     );
   }
@@ -83,7 +95,7 @@ class _AboutPageContentState extends State<_AboutPageContent> {
       child: Column(
         children: [
           _HeroSection(),
-          _OpenIdeasSection(applyCardKey: _applyCardKey),
+          _OpenIdeasSection(applyCardKey: _applyCardKey, headerKey: _openIdeasHeaderKey),
           _MissionVisionSection(),
           _AchievementsSection(),
           _TeamSection(),
@@ -95,9 +107,10 @@ class _AboutPageContentState extends State<_AboutPageContent> {
 }
 
 class _OpenIdeasSection extends StatelessWidget {
-  const _OpenIdeasSection({required this.applyCardKey});
+  const _OpenIdeasSection({required this.applyCardKey, required this.headerKey});
 
   final GlobalKey applyCardKey;
+  final GlobalKey headerKey;
 
   @override
   Widget build(BuildContext context) {
@@ -112,6 +125,7 @@ class _OpenIdeasSection extends StatelessWidget {
       child: Column(
         children: [
           Text(
+            key: headerKey,
             'Açık Fikirler Platformu',
             style: TextStyle(
               color: Branding.white,
@@ -744,7 +758,7 @@ class _MissionVisionSection extends StatelessWidget {
           SizedBox(height: Branding.spacingS),
           Expanded(
             child: Text(
-              'Ajans Hoş İşler\'yu; yerel değerleri küresel sahnede doğru anlatan, etkisi ölçülebilir projelerle anılan bir yapı olarak büyütmek. \nHoş İşler ağını genişleterek Şifa/Şifa İpek, Vefa ve Sefa başlıklarında daha fazla iyi işe aracılık etmek.',
+            'Ajans Hoş İşler\'yu; yerel değerleri küresel sahnede doğru anlatan, etkisi ölçülebilir projelerle anılan bir yapı olarak büyütmek. \nHoş İşler ağını genişleterek Şifa/Şifa İpek, Vefa ve Sefa başlıklarında daha fazla iyi işe aracılık etmek.',
               style: TextStyle(
                 color: Branding.white.withValues(alpha: 0.8),
                 fontSize: 14.0,
@@ -1992,6 +2006,8 @@ class _HoverableFooterLinkState extends State<_HoverableFooterLink> {
     );
   }
 }
+
+
 
 
 

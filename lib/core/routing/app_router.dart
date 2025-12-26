@@ -1,6 +1,6 @@
-/// 🚀 App Router - Uygulama router'ı
+﻿/// ğŸš€ App Router - Uygulama router'Ä±
 ///
-/// Bu sınıf, uygulamanın routing yapısını yönetir.
+/// Bu sÄ±nÄ±f, uygulamanÄ±n routing yapÄ±sÄ±nÄ± yÃ¶netir.
 library;
 
 import 'package:flutter/material.dart';
@@ -23,13 +23,13 @@ class AppRouter {
   static const String vefa = '/vefa';
   static const String sefa = '/sefa';
 
-  /// Sayfa yönlendirme fonksiyonu
-  static Widget getPage(String routeName, {String? projectId}) {
+  /// Sayfa yÃ¶nlendirme fonksiyonu
+  static Widget getPage(String routeName, {String? projectId, String? aboutAnchor}) {
     switch (routeName) {
       case home:
         return const HomePage();
       case about:
-        return const AboutPage();
+        return AboutPage(scrollToSection: aboutAnchor);
       case works:
         return const WorksPage();
       case conferences:
@@ -47,15 +47,22 @@ class AppRouter {
     }
   }
 
-  /// Sayfa geçiş animasyonu
+  /// Sayfa geÃ§iÅŸ animasyonu
   static Route<dynamic> generateRoute(RouteSettings settings) {
     final String routeName = settings.name ?? home;
-    final String? projectId = settings.arguments as String?;
+    final Object? args = settings.arguments;
+    String? projectId;
+    String? aboutAnchor;
+    if (routeName == projectDetail && args is String) {
+      projectId = args;
+    } else if (routeName == about && args is String) {
+      aboutAnchor = args;
+    }
 
     return PageRouteBuilder(
       settings: settings,
       pageBuilder: (context, animation, secondaryAnimation) {
-        return getPage(routeName, projectId: projectId);
+        return getPage(routeName, projectId: projectId, aboutAnchor: aboutAnchor);
       },
       transitionsBuilder: (context, animation, secondaryAnimation, child) {
         // Smooth fade transition
@@ -67,3 +74,4 @@ class AppRouter {
     );
   }
 }
+

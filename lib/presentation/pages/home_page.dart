@@ -6,6 +6,7 @@ library;
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:url_launcher/url_launcher.dart';
+import '../../core/constants/app_constants.dart';
 import '../../core/theme/branding.dart';
 import '../../core/theme/typography.dart';
 import '../../core/utils/responsive.dart';
@@ -106,13 +107,13 @@ class _HomePageState extends ConsumerState<HomePage>
                   // Hero Section - Ajans Hoş İşler Tanıtımı
                   _buildAgencyHeroSection(context),
 
-                  // About Section - Kimim, Ne Yapıyoruz, Neden Çalışıyoruz
+                  // About Section - Ne yapıyoruz, neye inanıyoruz
                   _buildAgencyAboutSection(context),
 
                   // Projects Section - Hoş İşler (Ajans Hoş İşler'in Projeleri)
                   _buildAgencyProjectsSection(context),
 
-                  // Conferences Section - Yurt Dışı Konferanslar & Etkinlikler
+                  // Conferences Section - Yurt Dışı Konuşmalar & Buluşmalar
                   _buildConferencesSection(context),
 
                   // Footer
@@ -233,7 +234,7 @@ class _HomePageState extends ConsumerState<HomePage>
                 ),
               ),
               child: Text(
-                'Yaratıcı Dijital Çözümler',
+                'Seçilmiş işler, sakin bir alan',
                 style: AppTypography.h5.copyWith(
                   color: Branding.white,
                   fontSize: 12,
@@ -254,7 +255,7 @@ class _HomePageState extends ConsumerState<HomePage>
           child: SlideTransition(
             position: _slideAnimation,
             child: Text(
-              'Dijital dünyada markanızı öne çıkaran\nstratejik ve yaratıcı çözümler',
+              'Değer yarattığına inandığımız işleri\nözenle bir araya getiriyoruz',
               style: AppTypography.h4.copyWith(
                 color: Branding.white.withValues(alpha: 0.9),
                 fontSize: 14,
@@ -331,7 +332,7 @@ class _HomePageState extends ConsumerState<HomePage>
                 ),
               ),
               child: Text(
-                'Yaratıcı Dijital Çözümler',
+                'Seçilmiş işler, sakin bir alan',
                 style: AppTypography.h5.copyWith(
                   color: Branding.white,
                   fontSize: 16,
@@ -352,7 +353,7 @@ class _HomePageState extends ConsumerState<HomePage>
           child: SlideTransition(
             position: _slideAnimation,
             child: Text(
-              'Dijital dünyada markanızı öne çıkaran\nstratejik ve yaratıcı çözümler',
+              'Değer yarattığına inandığımız işleri\nözenle bir araya getiriyoruz',
               style: AppTypography.h4.copyWith(
                 color: Branding.white.withValues(alpha: 0.9),
                 fontSize: 18,
@@ -429,7 +430,7 @@ class _HomePageState extends ConsumerState<HomePage>
                 ),
               ),
               child: Text(
-                'Yaratıcı Dijital Çözümler',
+                'Seçilmiş işler, sakin bir alan',
                 style: AppTypography.h5.copyWith(
                   color: Branding.white,
                   fontSize: 16,
@@ -450,7 +451,7 @@ class _HomePageState extends ConsumerState<HomePage>
           child: SlideTransition(
             position: _slideAnimation,
             child: Text(
-              'Dijital dünyada markanızı öne çıkaran\nstratejik ve yaratıcı çözümler',
+              'Değer yarattığına inandığımız işleri\nözenle bir araya getiriyoruz',
               style: AppTypography.h4.copyWith(
                 color: Branding.white.withValues(alpha: 0.9),
                 fontSize: 22,
@@ -542,7 +543,7 @@ class _HomePageState extends ConsumerState<HomePage>
           ),
         ),
         child: Text(
-          'Hemen İletişime Geç',
+          'İsterseniz yazın',
           style: AppTypography.button.copyWith(
             color: const Color(0xFF4A4A4A), // Medium grey
             fontSize: 12,
@@ -567,7 +568,7 @@ class _HomePageState extends ConsumerState<HomePage>
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       ),
       child: Text(
-        'Projelerimizi İncele',
+        'Seçkiyi Gör',
         style: AppTypography.button.copyWith(
           color: const Color(0xFFE0E0E0), // Light grey
           fontSize: 12,
@@ -603,7 +604,7 @@ class _HomePageState extends ConsumerState<HomePage>
           ),
         ),
         child: Text(
-          'Hemen İletişime Geç',
+          'İsterseniz yazın',
           style: AppTypography.button.copyWith(
             color: const Color(0xFF4A4A4A), // Medium grey
             fontSize: 14,
@@ -628,7 +629,7 @@ class _HomePageState extends ConsumerState<HomePage>
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       ),
       child: Text(
-        'Projelerimizi İncele',
+        'Seçkiyi Gör',
         style: AppTypography.button.copyWith(
           color: const Color(0xFFE0E0E0), // Light grey
           fontSize: 14,
@@ -664,7 +665,7 @@ class _HomePageState extends ConsumerState<HomePage>
           ),
         ),
         child: Text(
-          'Hemen İletişime Geç',
+          'İsterseniz yazın',
           style: AppTypography.button.copyWith(
             color: const Color(0xFF4A4A4A), // Medium grey
             fontSize: 14,
@@ -689,7 +690,7 @@ class _HomePageState extends ConsumerState<HomePage>
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       ),
       child: Text(
-        'Projelerimizi İncele',
+        'Seçkiyi Gör',
         style: AppTypography.button.copyWith(
           color: const Color(0xFFE0E0E0), // Light grey
           fontSize: 14,
@@ -751,7 +752,7 @@ class _HomePageState extends ConsumerState<HomePage>
         const SizedBox(height: 8),
 
         Text(
-          'Sosyal Sorumluluk ve El Sanatları Platformu',
+          'Seçilmiş işler için sakin bir seçki',
           style: AppTypography.h4.copyWith(
             color: const Color(0xFF6B6B6B),
             fontSize: 12,
@@ -759,6 +760,14 @@ class _HomePageState extends ConsumerState<HomePage>
           ),
           textAlign: TextAlign.center,
         ),
+
+        const SizedBox(height: 8),
+
+        _buildProjectsApplyNote(context, fontSize: 11),
+
+        const SizedBox(height: 12),
+
+        _buildProjectsApplyButton(context, fontSize: 12),
 
         const SizedBox(height: 20),
 
@@ -784,7 +793,7 @@ class _HomePageState extends ConsumerState<HomePage>
         const SizedBox(height: 12),
 
         Text(
-          'Sosyal Sorumluluk ve El Sanatları Platformu',
+          'Seçilmiş işler için sakin bir seçki',
           style: AppTypography.h4.copyWith(
             color: const Color(0xFF6B6B6B),
             fontSize: 14,
@@ -792,6 +801,14 @@ class _HomePageState extends ConsumerState<HomePage>
           ),
           textAlign: TextAlign.center,
         ),
+
+        const SizedBox(height: 8),
+
+        _buildProjectsApplyNote(context, fontSize: 12),
+
+        const SizedBox(height: 12),
+
+        _buildProjectsApplyButton(context, fontSize: 13),
 
         const SizedBox(height: 24),
 
@@ -816,7 +833,7 @@ class _HomePageState extends ConsumerState<HomePage>
         const SizedBox(height: 16),
 
         Text(
-          'Sosyal Sorumluluk ve El Sanatları Platformu',
+          'Seçilmiş işler için sakin bir seçki',
           style: AppTypography.h4.copyWith(
             color: const Color(0xFF6B6B6B),
             fontSize: 18,
@@ -825,10 +842,61 @@ class _HomePageState extends ConsumerState<HomePage>
           textAlign: TextAlign.center,
         ),
 
+        const SizedBox(height: 12),
+
+        _buildProjectsApplyNote(context, fontSize: 13),
+
+        const SizedBox(height: 16),
+
+        _buildProjectsApplyButton(context, fontSize: 14),
+
         const SizedBox(height: 32),
 
         _buildDesktopProjectsGrid(context),
       ],
+    );
+  }
+
+  Widget _buildProjectsApplyButton(
+    BuildContext context, {
+    required double fontSize,
+  }) {
+    return TextButton(
+      onPressed: () {
+        NavigationService.goToAbout(anchor: AppConstants.aboutApplyAnchor);
+      },
+      style: TextButton.styleFrom(
+        foregroundColor: const Color(0xFF2C2C2C),
+        textStyle: AppTypography.bodySmall.copyWith(
+          fontSize: fontSize + 1,
+          fontWeight: FontWeight.w600,
+        ),
+        padding: const EdgeInsets.symmetric(horizontal: 22.0, vertical: 12.0),
+        minimumSize: const Size(0, 40),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(24.0),
+          side: BorderSide(
+            color: const Color(0xFF2C2C2C).withValues(alpha: 0.2),
+          ),
+        ),
+        backgroundColor: Colors.white.withValues(alpha: 0.6),
+      ),
+      child: const Text('Nasıl başvurulur?'),
+    );
+  }
+
+  Widget _buildProjectsApplyNote(
+    BuildContext context, {
+    required double fontSize,
+  }) {
+    return Text(
+      'Başvuru adımları ve paylaşım formatı için kısa rehber.',
+      style: AppTypography.bodySmall.copyWith(
+        color: const Color(0xFF6B6B6B),
+        fontSize: fontSize,
+        fontWeight: FontWeight.w400,
+      ),
+      textAlign: TextAlign.center,
     );
   }
 
@@ -889,7 +957,7 @@ class _HomePageState extends ConsumerState<HomePage>
         'id': 'sifa',
         'title': 'Şifa İpek',
         'description':
-            'Hatay\'da yetişen Barış ipeği ve Hatay depreminden sonra köylerde yaşayan kadın çiftçilerin tezgahlarında dokudukları ürünlerin değere döndürülmesine yardım eden sosyal sorumluluk projesi.',
+            'Hatay''da Barış ipeğiyle dokunan, kadın üreticilerin emeğini görünür kılan; yerel üretimi yaşatan ve dayanışmayı büyüten sakin bir iş.''da Barış ipeğiyle dokunan, kadın üreticilerin emeğini görünür kılan sakin bir dayanışma işi.',
         'image': 'assets/images/projects/sifa_project.jpg',
         'category': 'Sosyal',
         'icon': Icons.favorite,
@@ -899,7 +967,7 @@ class _HomePageState extends ConsumerState<HomePage>
         'id': 'vefa',
         'title': 'Vefa',
         'description':
-            'Alanya\'daki ailemden kalan kız meslek lisesi ve turizm otelcilik okulu öğrencilerine ve Alanya ile ilgili projeleri kapsayan eğitim ve gelişim platformu.',
+            'Alanya''daki okul mirasından doğan; gençlere eğitim ve gelişim alanı açan, yerel hafızayı geleceğe bağlayan bir buluşma noktası.''daki okul mirasından doğan; gençlere eğitim ve gelişim alanı açan bir buluşma noktası.',
         'image': 'assets/images/projects/vefa_project.jpg',
         'category': 'Eğitim',
         'icon': Icons.school,
@@ -909,7 +977,7 @@ class _HomePageState extends ConsumerState<HomePage>
         'id': 'sefa',
         'title': 'Sefa',
         'description':
-            'Şifa İpeği ile üretilen keyifli ürünlerden oluşan bir seri. Geleneksel el sanatlarının modern yaşamla buluştuğu özel koleksiyon.',
+            'Şifa İpek ile üretilen seçilmiş parçalar; geleneği bugünün diliyle buluşturan, yavaş ve özenli bir seri.',
         'image': 'assets/images/projects/sefa_project.jpg',
         'category': 'El Sanatları',
         'icon': Icons.palette,
@@ -2219,7 +2287,7 @@ class _HomePageState extends ConsumerState<HomePage>
         // Başlık - Mobile'da ortalanmış
         Center(
           child: Text(
-            'Ajans Hoş İşler Hikayesi',
+            'Ajans Hoş İşler Hakkında',
             textAlign: TextAlign.center,
             style: AppTypography.h3.copyWith(
               color: const Color(0xFF2C2C2C),
@@ -2234,7 +2302,7 @@ class _HomePageState extends ConsumerState<HomePage>
         // Alt başlık - Mobile'da ortalanmış
         Center(
           child: Text(
-            'Kimim, Ne Yapıyoruz, Neden Çalışıyoruz',
+            'Ne yapıyoruz, neye inanıyoruz',
             textAlign: TextAlign.center,
             style: AppTypography.h5.copyWith(
               color: const Color(0xFF6B6B6B),
@@ -2248,7 +2316,7 @@ class _HomePageState extends ConsumerState<HomePage>
 
         // Ana metin - Mobile'da daha küçük font
         Text(
-          '20+ yıllık lüks perakende deneyimi ile Louis Vuitton, Gucci ve Bulgari gibi dünya devi markaların Türkiye pazarında büyümesine liderlik ettim. Harvard Business School eğitimi ve küresel marka yönetimi deneyimimle, Ajans Hoş İşler\'ı kurarak bu bilgi birikimini dijital dünyaya taşıyorum.',
+          'Yıllar içinde farklı markalarla çalıştım; bu deneyimi Ajans Hoş İşler’de özenli bir seçki kurmak ve doğru bağlamlar oluşturmak için kullanıyorum.',
           textAlign: TextAlign.justify,
           style: AppTypography.bodyLarge.copyWith(
             color: const Color(0xFF4A4A4A),
@@ -2261,7 +2329,7 @@ class _HomePageState extends ConsumerState<HomePage>
 
         // İkinci metin - Mobile'da daha küçük font
         Text(
-          'Türkiye Tanıtım Grubu İcra Kurulu Başkanlığı ve Comité Colbert Türkiye Yılı Başkanlığı deneyimlerimle, markaların küresel pazarlarda güçlü konumlanması için stratejik yaklaşımlar geliştiriyoruz. Her proje, bir markanın hikayesini en etkili şekilde anlatma fırsatıdır.',
+          'Kurucu rolüm üretici ya da servis sağlayıcı olmak değil; doğru işleri doğru kişilerle buluşturan, bağ kuran ve küratöryel bir yaklaşımı sürdüren kişi olmaktır.',
           textAlign: TextAlign.justify,
           style: AppTypography.bodyMedium.copyWith(
             color: const Color(0xFF6B6B6B),
@@ -2278,7 +2346,7 @@ class _HomePageState extends ConsumerState<HomePage>
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Ajans Hoş İşler Hikayesi',
+          'Ajans Hoş İşler Hakkında',
           style: AppTypography.h3.copyWith(
             color: const Color(0xFF2C2C2C),
             fontWeight: FontWeight.w700,
@@ -2289,7 +2357,7 @@ class _HomePageState extends ConsumerState<HomePage>
         const SizedBox(height: 16),
 
         Text(
-          'Kimim, Ne Yapıyoruz, Neden Çalışıyoruz',
+          'Ne yapıyoruz, neye inanıyoruz',
           style: AppTypography.h5.copyWith(
             color: const Color(0xFF6B6B6B),
             fontWeight: FontWeight.w500,
@@ -2300,7 +2368,7 @@ class _HomePageState extends ConsumerState<HomePage>
         const SizedBox(height: 20),
 
         Text(
-          '20+ yıllık lüks perakende deneyimi ile Louis Vuitton, Gucci ve Bulgari gibi dünya devi markaların Türkiye pazarında büyümesine liderlik ettim. Harvard Business School eğitimi ve küresel marka yönetimi deneyimimle, Ajans Hoş İşler\'ı kurarak bu bilgi birikimini dijital dünyaya taşıyorum.',
+          'Yıllar içinde farklı markalarla çalıştım; bu deneyimi Ajans Hoş İşler’de özenli bir seçki kurmak ve doğru bağlamlar oluşturmak için kullanıyorum.',
           style: AppTypography.bodyLarge.copyWith(
             color: const Color(0xFF4A4A4A),
             height: 1.6,
@@ -2311,7 +2379,7 @@ class _HomePageState extends ConsumerState<HomePage>
         const SizedBox(height: 20),
 
         Text(
-          'Türkiye Tanıtım Grubu İcra Kurulu Başkanlığı ve Comité Colbert Türkiye Yılı Başkanlığı deneyimlerimle, markaların küresel pazarlarda güçlü konumlanması için stratejik yaklaşımlar geliştiriyoruz. Her proje, bir markanın hikayesini en etkili şekilde anlatma fırsatıdır.',
+          'Kurucu rolüm üretici ya da servis sağlayıcı olmak değil; doğru işleri doğru kişilerle buluşturan, bağ kuran ve küratöryel bir yaklaşımı sürdüren kişi olmaktır.',
           style: AppTypography.bodyMedium.copyWith(
             color: const Color(0xFF6B6B6B),
             height: 1.6,
@@ -2327,7 +2395,7 @@ class _HomePageState extends ConsumerState<HomePage>
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Ajans Hoş İşler Hikayesi',
+          'Ajans Hoş İşler Hakkında',
           style: AppTypography.h3.copyWith(
             color: const Color(0xFF2C2C2C),
             fontWeight: FontWeight.w700,
@@ -2338,7 +2406,7 @@ class _HomePageState extends ConsumerState<HomePage>
         const SizedBox(height: 16),
 
         Text(
-          'Kimim, Ne Yapıyoruz, Neden Çalışıyoruz',
+          'Ne yapıyoruz, neye inanıyoruz',
           style: AppTypography.h5.copyWith(
             color: const Color(0xFF6B6B6B),
             fontWeight: FontWeight.w500,
@@ -2349,7 +2417,7 @@ class _HomePageState extends ConsumerState<HomePage>
         const SizedBox(height: 20),
 
         Text(
-          '20+ yıllık lüks perakende deneyimi ile Louis Vuitton, Gucci ve Bulgari gibi dünya devi markaların Türkiye pazarında büyümesine liderlik ettim. Harvard Business School eğitimi ve küresel marka yönetimi deneyimimle, Ajans Hoş İşler\'ı kurarak bu bilgi birikimini dijital dünyaya taşıyorum.',
+          'Yıllar içinde farklı markalarla çalıştım; bu deneyimi Ajans Hoş İşler’de özenli bir seçki kurmak ve doğru bağlamlar oluşturmak için kullanıyorum.',
           style: AppTypography.bodyLarge.copyWith(
             color: const Color(0xFF4A4A4A),
             height: 1.5,
@@ -2360,7 +2428,7 @@ class _HomePageState extends ConsumerState<HomePage>
         const SizedBox(height: 20),
 
         Text(
-          'Türkiye Tanıtım Grubu İcra Kurulu Başkanlığı ve Comité Colbert Türkiye Yılı Başkanlığı deneyimlerimle, markaların küresel pazarlarda güçlü konumlanması için stratejik yaklaşımlar geliştiriyoruz. Her proje, bir markanın hikayesini en etkili şekilde anlatma fırsatıdır.',
+          'Kurucu rolüm üretici ya da servis sağlayıcı olmak değil; doğru işleri doğru kişilerle buluşturan, bağ kuran ve küratöryel bir yaklaşımı sürdüren kişi olmaktır.',
           style: AppTypography.bodyMedium.copyWith(
             color: const Color(0xFF6B6B6B),
             height: 1.5,
@@ -2404,7 +2472,7 @@ class _HomePageState extends ConsumerState<HomePage>
       children: [
         // Başlık - Mobile'da ortalanmış ve küçük
         Text(
-          'Neden Bizi Seçmelisiniz?',
+          'Neden Bu Yaklaşım?',
           style: AppTypography.h3.copyWith(
             color: const Color(0xFF2C2C2C),
             fontWeight: FontWeight.w700,
@@ -2425,7 +2493,7 @@ class _HomePageState extends ConsumerState<HomePage>
     return Column(
       children: [
         Text(
-          'Neden Bizi Seçmelisiniz?',
+          'Neden Bu Yaklaşım?',
           style: AppTypography.h3.copyWith(
             color: const Color(0xFF2C2C2C),
             fontWeight: FontWeight.w700,
@@ -2445,7 +2513,7 @@ class _HomePageState extends ConsumerState<HomePage>
     return Column(
       children: [
         Text(
-          'Neden Bizi Seçmelisiniz?',
+          'Neden Bu Yaklaşım?',
           style: AppTypography.h3.copyWith(
             color: const Color(0xFF2C2C2C),
             fontWeight: FontWeight.w700,
@@ -2463,12 +2531,12 @@ class _HomePageState extends ConsumerState<HomePage>
 
   Widget _buildMobileFeaturesList(BuildContext context) {
     final features = [
-      '🏆 20+ yıl lüks perakende deneyimi',
+      '🌿 Seçki odaklı deneyim',
       '🎓 Harvard Business School eğitimi',
       '🌍 Küresel marka yönetimi uzmanlığı',
       '🤝 Louis Vuitton, Gucci, Bulgari deneyimi',
-      '📈 Türkiye Tanıtım Grubu liderliği',
-      '🎨 Comité Colbert Türkiye Yılı başkanlığı',
+      '🔗 Bağlayıcı ve küratöryel rol',
+      '🪞 Sakin ve seçici yaklaşım',
     ];
 
     return Column(
@@ -2506,12 +2574,12 @@ class _HomePageState extends ConsumerState<HomePage>
 
   Widget _buildTabletFeaturesList(BuildContext context) {
     final features = [
-      '🏆 20+ yıl lüks perakende deneyimi',
+      '🌿 Seçki odaklı deneyim',
       '🎓 Harvard Business School eğitimi',
       '🌍 Küresel marka yönetimi uzmanlığı',
       '🤝 Louis Vuitton, Gucci, Bulgari deneyimi',
-      '📈 Türkiye Tanıtım Grubu liderliği',
-      '🎨 Comité Colbert Türkiye Yılı başkanlığı',
+      '🔗 Bağlayıcı ve küratöryel rol',
+      '🪞 Sakin ve seçici yaklaşım',
     ];
 
     return Column(
@@ -2549,12 +2617,12 @@ class _HomePageState extends ConsumerState<HomePage>
 
   Widget _buildDesktopFeaturesList(BuildContext context) {
     final features = [
-      '🏆 20+ yıl lüks perakende deneyimi',
+      '🌿 Seçki odaklı deneyim',
       '🎓 Harvard Business School eğitimi',
       '🌍 Küresel marka yönetimi uzmanlığı',
       '🤝 Louis Vuitton, Gucci, Bulgari deneyimi',
-      '📈 Türkiye Tanıtım Grubu liderliği',
-      '🎨 Comité Colbert Türkiye Yılı başkanlığı',
+      '🔗 Bağlayıcı ve küratöryel rol',
+      '🪞 Sakin ve seçici yaklaşım',
     ];
 
     return Column(
@@ -2630,7 +2698,7 @@ class _HomePageState extends ConsumerState<HomePage>
       children: [
         // Başlık - Mobile'da ortalanmış ve küçük
         Text(
-          'Yurt Dışı Konferanslar & Etkinlikler',
+          'Yurt Dışı Konuşmalar & Buluşmalar',
           style: AppTypography.h2.copyWith(
             color: const Color(0xFF2C2C2C),
             fontSize: 18,
@@ -2668,7 +2736,7 @@ class _HomePageState extends ConsumerState<HomePage>
     return Column(
       children: [
         Text(
-          'Yurt Dışı Konferanslar & Etkinlikler',
+          'Yurt Dışı Konuşmalar & Buluşmalar',
           style: AppTypography.h2.copyWith(
             color: const Color(0xFF2C2C2C),
             fontSize: 24,
@@ -2704,7 +2772,7 @@ class _HomePageState extends ConsumerState<HomePage>
     return Column(
       children: [
         Text(
-          'Yurt Dışı Konferanslar & Etkinlikler',
+          'Yurt Dışı Konuşmalar & Buluşmalar',
           style: AppTypography.h2.copyWith(
             color: const Color(0xFF2C2C2C),
             fontSize: 28,
@@ -3464,4 +3532,26 @@ class _BackgroundPatternPainter extends CustomPainter {
 }
 
 // Hoverable Footer Link Widget
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

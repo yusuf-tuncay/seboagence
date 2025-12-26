@@ -14,7 +14,9 @@ import '../widgets/optimized_navigation_bar.dart';
 import '../widgets/common/footer_widget.dart';
 
 class AboutPage extends ConsumerWidget {
-  const AboutPage({super.key});
+  const AboutPage({super.key, this.scrollToSection});
+
+  final String? scrollToSection;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -23,7 +25,7 @@ class AboutPage extends ConsumerWidget {
       body: Column(
         children: [
           const OptimizedNavigationBar(),
-          Expanded(child: _AboutPageContent()),
+          Expanded(child: _AboutPageContent(scrollToSection: scrollToSection)),
         ],
       ),
     );
@@ -31,16 +33,57 @@ class AboutPage extends ConsumerWidget {
 }
 
 /// Optimized About Page Content
-class _AboutPageContent extends StatelessWidget {
-  const _AboutPageContent();
+class _AboutPageContent extends StatefulWidget {
+  const _AboutPageContent({this.scrollToSection});
+
+  final String? scrollToSection;
+
+  @override
+  State<_AboutPageContent> createState() => _AboutPageContentState();
+}
+
+class _AboutPageContentState extends State<_AboutPageContent> {
+  final ScrollController _scrollController = ScrollController();
+  final GlobalKey _applyCardKey = GlobalKey();
+
+  @override
+  void initState() {
+    super.initState();
+
+    if (widget.scrollToSection == AppConstants.aboutApplyAnchor) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        _scrollToApplyCard();
+      });
+    }
+  }
+
+  void _scrollToApplyCard() {
+    final context = _applyCardKey.currentContext;
+    if (context == null) {
+      return;
+    }
+
+    Scrollable.ensureVisible(
+      context,
+      duration: const Duration(milliseconds: 400),
+      curve: Curves.easeOutCubic,
+    );
+  }
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      controller: _scrollController,
       child: Column(
         children: [
           _HeroSection(),
-          _OpenIdeasSection(),
+          _OpenIdeasSection(applyCardKey: _applyCardKey),
           _MissionVisionSection(),
           _AchievementsSection(),
           _TeamSection(),
@@ -51,9 +94,10 @@ class _AboutPageContent extends StatelessWidget {
   }
 }
 
-/// Açık Fikirler Platformu Section
 class _OpenIdeasSection extends StatelessWidget {
-  const _OpenIdeasSection();
+  const _OpenIdeasSection({required this.applyCardKey});
+
+  final GlobalKey applyCardKey;
 
   @override
   Widget build(BuildContext context) {
@@ -95,9 +139,9 @@ class _OpenIdeasSection extends StatelessWidget {
           SizedBox(height: Branding.spacingXL),
           Responsive.responsiveWidget(
             context,
-            mobile: _buildMobileCards(),
-            tablet: _buildTabletCards(),
-            desktop: _buildDesktopCards(),
+            mobile: _buildMobileCards(applyCardKey),
+            tablet: _buildTabletCards(applyCardKey),
+            desktop: _buildDesktopCards(applyCardKey),
           ),
           SizedBox(height: Branding.spacingXL),
           _buildProcessScopeSection(context),
@@ -274,7 +318,7 @@ class _OpenIdeasSection extends StatelessWidget {
     );
   }
 
-  Widget _buildMobileCards() {
+  Widget _buildMobileCards(GlobalKey applyCardKey) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -288,8 +332,9 @@ class _OpenIdeasSection extends StatelessWidget {
         ),
         SizedBox(height: Branding.spacingL),
         _buildOpenIdeaCard(
-          icon: Icons.email_outlined,
-          title: 'Nasıl Başvurulur',
+          cardKey: applyCardKey,
+                  icon: Icons.email_outlined,
+                  title: 'Nasıl Başvurulur',
           description:
               'Kısa bir proje özeti, amaç ve ihtiyaçlarınızla birlikte '
               '${AppConstants.companyEmail} adresine e-posta gönderin. '
@@ -311,7 +356,7 @@ class _OpenIdeasSection extends StatelessWidget {
     );
   }
 
-  Widget _buildTabletCards() {
+  Widget _buildTabletCards(GlobalKey applyCardKey) {
     return Column(
       children: [
         IntrinsicHeight(
@@ -331,6 +376,7 @@ class _OpenIdeasSection extends StatelessWidget {
               SizedBox(width: Branding.spacingL),
               Expanded(
                 child: _buildOpenIdeaCard(
+                  cardKey: applyCardKey,
                   icon: Icons.email_outlined,
                   title: 'Nasıl Başvurulur',
                   description:
@@ -358,7 +404,7 @@ class _OpenIdeasSection extends StatelessWidget {
     );
   }
 
-  Widget _buildDesktopCards() {
+  Widget _buildDesktopCards(GlobalKey applyCardKey) {
     return IntrinsicHeight(
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -376,8 +422,9 @@ class _OpenIdeasSection extends StatelessWidget {
           SizedBox(width: Branding.spacingL),
           Expanded(
             child: _buildOpenIdeaCard(
-              icon: Icons.email_outlined,
-              title: 'Nasıl Başvurulur',
+                  cardKey: applyCardKey,
+                  icon: Icons.email_outlined,
+                  title: 'Nasıl Başvurulur',
               description:
                   'Kısa bir proje özeti, amaç ve ihtiyaçlarınızla birlikte '
                   '${AppConstants.companyEmail} adresine e-posta gönderin. '
@@ -404,12 +451,15 @@ class _OpenIdeasSection extends StatelessWidget {
   }
 
   Widget _buildOpenIdeaCard({
+    Key? cardKey,
+
     required IconData icon,
     required String title,
     required String description,
     required Color color,
   }) {
     return Container(
+      key: cardKey,
       padding: EdgeInsets.all(Branding.spacingXL),
       decoration: BoxDecoration(
         color: Branding.white.withValues(alpha: 0.08),
@@ -1942,6 +1992,14 @@ class _HoverableFooterLinkState extends State<_HoverableFooterLink> {
     );
   }
 }
+
+
+
+
+
+
+
+
 
 
 

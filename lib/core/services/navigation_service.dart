@@ -1,6 +1,6 @@
-/// 🧭 Navigation Service
+﻿/// ğŸ§­ Navigation Service
 ///
-/// Bu servis, uygulama genelinde navigation işlemlerini yönetir.
+/// Bu servis, uygulama genelinde navigation iÅŸlemlerini yÃ¶netir.
 library;
 
 import 'package:flutter/material.dart';
@@ -19,46 +19,46 @@ class NavigationService {
   static void goToHome() {
     if (currentState != null) {
       HapticFeedback.lightImpact();
-      _showLoadingAndNavigate('Ana Sayfaya Geçiliyor...', () {
+      _showLoadingAndNavigate('Ana Sayfaya GeÃ§iliyor...', () {
         currentState!.pushNamedAndRemoveUntil('/', (route) => false);
       });
     }
   }
 
-  /// Hakkımızda sayfasına git
-  static void goToAbout() {
+  /// HakkÄ±mÄ±zda sayfasÄ±na git
+  static void goToAbout({String? anchor}) {
     if (currentState != null) {
       HapticFeedback.lightImpact();
-      _showLoadingAndNavigate('Hakkımızda Sayfası Yükleniyor...', () {
-        currentState!.pushNamed('/about');
+      _showLoadingAndNavigate('HakkÄ±mÄ±zda SayfasÄ± YÃ¼kleniyor...', () {
+        currentState!.pushNamed('/about', arguments: anchor);
       });
     }
   }
 
-  /// İletişim sayfasına git
+  /// Ä°letiÅŸim sayfasÄ±na git
   static void goToContact() {
     if (currentState != null) {
       HapticFeedback.lightImpact();
-      _showLoadingAndNavigate('İletişim Sayfası Yükleniyor...', () {
+      _showLoadingAndNavigate('Ä°letiÅŸim SayfasÄ± YÃ¼kleniyor...', () {
         currentState!.pushNamed('/contact');
       });
     }
   }
 
-  /// Projeler sayfasına git
+  /// Projeler sayfasÄ±na git
   static void goToWorks() {
     if (currentState != null) {
       HapticFeedback.lightImpact();
-      _showLoadingAndNavigate('Projeler Sayfası Yükleniyor...', () {
+      _showLoadingAndNavigate('Projeler SayfasÄ± YÃ¼kleniyor...', () {
         currentState!.pushNamed('/works');
       });
     }
   }
 
-  /// Yükleme göster ve navigasyon yap
+  /// YÃ¼kleme gÃ¶ster ve navigasyon yap
   static void _showLoadingAndNavigate(String message, VoidCallback navigation) {
     if (currentContext != null) {
-      // Yükleme overlay'ini göster
+      // YÃ¼kleme overlay'ini gÃ¶ster
       showDialog(
         context: currentContext!,
         barrierDismissible: false,
@@ -66,9 +66,9 @@ class NavigationService {
         builder: (context) => PageTransitionLoading(message: message),
       );
 
-      // Kısa bir gecikme sonrası navigasyon yap
+      // KÄ±sa bir gecikme sonrasÄ± navigasyon yap
       Future.delayed(const Duration(milliseconds: 300), () {
-        // Yükleme ekranını kapat
+        // YÃ¼kleme ekranÄ±nÄ± kapat
         Navigator.of(currentContext!).pop();
         // Navigasyonu yap
         navigation();
@@ -76,51 +76,51 @@ class NavigationService {
     }
   }
 
-  /// Proje detayına git
+  /// Proje detayÄ±na git
   static void goToProject(String projectId) {
     if (currentState != null) {
       currentState!.pushNamed('/project/$projectId');
     }
   }
 
-  /// VEFA projesi sayfasına git
+  /// VEFA projesi sayfasÄ±na git
   static void goToVefa() {
     if (currentState != null) {
       HapticFeedback.lightImpact();
-      _showLoadingAndNavigate('VEFA Projesi Yükleniyor...', () {
+      _showLoadingAndNavigate('VEFA Projesi YÃ¼kleniyor...', () {
         currentState!.pushNamed('/vefa');
       });
     }
   }
 
-  /// SEFA projesi sayfasına git
+  /// SEFA projesi sayfasÄ±na git
   static void goToSefa() {
     if (currentState != null) {
       HapticFeedback.lightImpact();
-      _showLoadingAndNavigate('SEFA Projesi Yükleniyor...', () {
+      _showLoadingAndNavigate('SEFA Projesi YÃ¼kleniyor...', () {
         currentState!.pushNamed('/sefa');
       });
     }
   }
 
-  /// Konferans detayına git
+  /// Konferans detayÄ±na git
   static void goToConference(String conferenceId) {
     if (currentState != null) {
       currentState!.pushNamed('/conference/$conferenceId');
     }
   }
 
-  /// Konferanslar sayfasına git
+  /// Konferanslar sayfasÄ±na git
   static void goToConferences() {
     if (currentState != null) {
       HapticFeedback.lightImpact();
-      _showLoadingAndNavigate('Konferanslar Sayfası Yükleniyor...', () {
+      _showLoadingAndNavigate('Konferanslar SayfasÄ± YÃ¼kleniyor...', () {
         currentState!.pushNamed('/conferences');
       });
     }
   }
 
-  /// Tüm konferanslar sayfasına git
+  /// TÃ¼m konferanslar sayfasÄ±na git
   static void goToAllConferences() {
     if (currentState != null) {
       currentState!.pushNamed('/conferences');
@@ -134,7 +134,7 @@ class NavigationService {
     }
   }
 
-  /// Modal göster
+  /// Modal gÃ¶ster
   static Future<T?> showModal<T>(Widget modal) {
     if (currentContext != null) {
       return showModalBottomSheet<T>(
@@ -147,7 +147,7 @@ class NavigationService {
     return Future.value(null);
   }
 
-  /// Dialog göster
+  /// Dialog gÃ¶ster
   static Future<T?> showCustomDialog<T>(Widget dialog) {
     if (currentContext != null) {
       return showDialog<T>(
@@ -158,7 +158,7 @@ class NavigationService {
     return Future.value(null);
   }
 
-  /// Snackbar göster
+  /// Snackbar gÃ¶ster
   static void showSnackBar(
     String message, {
     Color? backgroundColor,
@@ -175,3 +175,4 @@ class NavigationService {
     }
   }
 }
+

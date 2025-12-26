@@ -6,6 +6,7 @@ class AppConstants {
   // Uygulama Bilgileri
   static const String appName = 'Ajans Hoş İşler';
   static const String appVersion = '1.0.0';
+  static const String aboutApplyAnchor = 'open_ideas_apply';
   static const String appDescription =
       'Lüks Markaların Türkiye\'deki Stratejik Ortağı';
 
@@ -78,4 +79,5 @@ class AppConstants {
   // Private constructor - Bu sınıf instantiate edilemez
   AppConstants._();
 }
+
 

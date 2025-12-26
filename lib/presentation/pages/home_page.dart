@@ -870,7 +870,10 @@ class _HomePageState extends ConsumerState<HomePage>
         textStyle: AppTypography.bodySmall.copyWith(
           fontSize: fontSize + 3,
           fontWeight: FontWeight.w600,
+          height: 1.0,
+          leadingDistribution: TextLeadingDistribution.even,
         ),
+        alignment: Alignment.center,
         padding: const EdgeInsets.symmetric(horizontal: 28.0, vertical: 16.0),
         minimumSize: const Size(0, 48),
         shape: RoundedRectangleBorder(
@@ -3532,6 +3535,8 @@ class _BackgroundPatternPainter extends CustomPainter {
 }
 
 // Hoverable Footer Link Widget
+
+
 
 
 

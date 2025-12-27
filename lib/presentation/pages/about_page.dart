@@ -61,16 +61,17 @@ class _AboutPageContentState extends State<_AboutPageContent> {
     }
   }
   void _scrollToOpenIdeasHeader() {
-    final context = _openIdeasHeaderKey.currentContext;
-    if (context == null) {
+    final headerContext = _openIdeasHeaderKey.currentContext;
+    if (headerContext == null) {
       return;
     }
 
-    final renderObject = context.findRenderObject();
-    final viewport = RenderAbstractViewport.of(renderObject);
-    if (renderObject == null || viewport == null) {
+    final renderObject = headerContext.findRenderObject();
+    if (renderObject == null) {
       return;
     }
+
+    final viewport = RenderAbstractViewport.of(renderObject);
 
     const double navOffset = 48.0;
     final reveal = viewport.getOffsetToReveal(renderObject, 0.0);
@@ -603,7 +604,7 @@ class _OpenIdeasSection extends StatelessWidget {
             SizedBox(height: gapM),
             Align(
               alignment: Alignment.center,
-              child: action!,
+              child: action,
             ),
           ],
         ],

@@ -1,4 +1,4 @@
-﻿/// 🏠 VEFA Projesi Detay Sayfası
+/// ?? VEFA Projesi Detay Sayfası
 ///
 /// Bu sayfa, VEFA projesinin detaylarını gösterir.
 /// Mavi ve beyaz renk teması kullanılır.
@@ -281,7 +281,7 @@ class _HeroSection extends StatelessWidget {
                       : 160.0,
                 ),
                 child: Text(
-                  '🧵 Üretmek: Bir Meslekten Öte, Bir Karakter Manifestosu\n\nOkullarımızda "üretmek" kavramı, dar anlamıyla bir beceri öğrenme eyleminin çok ötesinde, felsefi bir derinlik taşır. O, dürüstlüğü, meslek ahlakını, disiplini, sorumluluğu ve özgüveni ilmek ilmek dokuyan, adeta bir karakter manifestosudur. Gençlerimiz, özellikle de genç kadınlarımız, burada sadece mutfak, otelcilik veya el sanatları gibi meslekleri öğrenmezler; onlar, kendi emekleriyle, alın terleriyle hayata tutunmanın onurunu ve kimseye bağlı kalmamanın gücünü keşfederler. Bu üretim kültürü, onlara sadece ekonomik bağımsızlık kazandırmakla kalmaz, aynı zamanda zorluklar karşısında yılmama, çözüm odaklı olma ve çevreleri için de değer yaratma yetisi kazandırır.',
+                  '?? Üretmek: Bir Meslekten Öte, Bir Karakter Manifestosu\n\nOkullarımızda "üretmek" kavramı, dar anlamıyla bir beceri öğrenme eyleminin çok ötesinde, felsefi bir derinlik taşır. O, dürüstlüğü, meslek ahlakını, disiplini, sorumluluğu ve özgüveni ilmek ilmek dokuyan, adeta bir karakter manifestosudur. Gençlerimiz, özellikle de genç kadınlarımız, burada sadece mutfak, otelcilik veya el sanatları gibi meslekleri öğrenmezler; onlar, kendi emekleriyle, alın terleriyle hayata tutunmanın onurunu ve kimseye bağlı kalmamanın gücünü keşfederler. Bu üretim kültürü, onlara sadece ekonomik bağımsızlık kazandırmakla kalmaz, aynı zamanda zorluklar karşısında yılmama, çözüm odaklı olma ve çevreleri için de değer yaratma yetisi kazandırır.',
                   style: TextStyle(
                     color: const Color(0xFF1F2937),
                     fontSize: isMobile
@@ -348,7 +348,7 @@ class _HeroSection extends StatelessWidget {
 
                     // Başlık
                     Text(
-                      '🧭 Bir Kentin Nazımı: Dedemizin Mirası ve Süreklilik Anlayışı',
+                      '?? Bir Kentin Nazımı: Dedemizin Mirası ve Süreklilik Anlayışı',
                       style: TextStyle(
                         color: const Color(0xFF1F2937),
                         fontSize: isMobile
@@ -435,7 +435,7 @@ class _HeroSection extends StatelessWidget {
 
                     // Başlık
                     Text(
-                      '📜 Sayfalarımızda Yaşayacak Olanlar: Belleğin Kayıtları',
+                      '?? Sayfalarımızda Yaşayacak Olanlar: Belleğin Kayıtları',
                       style: TextStyle(
                         color: const Color(0xFF1F2937),
                         fontSize: isMobile
@@ -522,7 +522,7 @@ class _HeroSection extends StatelessWidget {
 
                     // Başlık
                     Text(
-                      '💪 Metanetle Çalışan Genç Kadınlar: Toplumun Temeli',
+                      '?? Metanetle Çalışan Genç Kadınlar: Toplumun Temeli',
                       style: TextStyle(
                         color: const Color(0xFF1F2937),
                         fontSize: isMobile
@@ -609,7 +609,7 @@ class _HeroSection extends StatelessWidget {
 
                     // Başlık
                     Text(
-                      '🎓 Eğitimin Kaldıraç Gücü: Ali Nazım Köseoğlu\'nun Vizyonu',
+                      '?? Eğitimin Kaldıraç Gücü: Ali Nazım Köseoğlu\'nun Vizyonu',
                       style: TextStyle(
                         color: const Color(0xFF1F2937),
                         fontSize: isMobile
@@ -660,7 +660,7 @@ class _HeroSection extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      '🌟 Vefa Yolculuğumuza Katılın',
+                      '?? Vefa Yolculuğumuza Katılın',
                       style: TextStyle(
                         color: const Color(0xFF1F2937),
                         fontSize: isMobile
@@ -1860,7 +1860,7 @@ class _FooterWidget extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 12),
-        _buildMobileContactItem(Icons.email, 'seboagence@gmail.com'),
+        _buildMobileContactItem(Icons.email, 'sby@gmail.com'),
         _buildMobileContactItem(Icons.phone, '+90 (212) 123 45 67'),
         _buildMobileContactItem(Icons.location_on, 'İstanbul, Türkiye'),
       ],
@@ -1880,7 +1880,7 @@ class _FooterWidget extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 14),
-        _buildTabletContactItem(Icons.email, 'seboagence@gmail.com'),
+        _buildTabletContactItem(Icons.email, 'sby@gmail.com'),
         _buildTabletContactItem(Icons.phone, '+90 (212) 123 45 67'),
         _buildTabletContactItem(Icons.location_on, 'İstanbul, Türkiye'),
       ],
@@ -1900,7 +1900,7 @@ class _FooterWidget extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 16),
-        _buildContactItem(Icons.email, 'seboagence@gmail.com'),
+        _buildContactItem(Icons.email, 'sby@gmail.com'),
         _buildContactItem(Icons.phone, '+90 (212) 123 45 67'),
         _buildContactItem(Icons.location_on, 'İstanbul, Türkiye'),
       ],
@@ -1984,7 +1984,7 @@ class _FooterWidget extends StatelessWidget {
           ),
           const SizedBox(height: 4),
           Text(
-            'Geliştirildi ❤️ ile',
+            'Geliştirildi ?? ile',
             textAlign: TextAlign.center,
             style: AppTypography.bodySmall.copyWith(
               color: const Color(0xFF808080),
@@ -2013,7 +2013,7 @@ class _FooterWidget extends StatelessWidget {
             ),
           ),
           Text(
-            'Geliştirildi ❤️ ile',
+            'Geliştirildi ?? ile',
             style: AppTypography.bodySmall.copyWith(
               color: const Color(0xFF808080),
               fontSize: 9,
@@ -2041,7 +2041,7 @@ class _FooterWidget extends StatelessWidget {
             ),
           ),
           Text(
-            'Geliştirildi ❤️ ile',
+            'Geliştirildi ?? ile',
             style: AppTypography.bodySmall.copyWith(
               color: const Color(0xFF808080),
               fontSize: 10,
@@ -2097,4 +2097,5 @@ class _HoverableFooterLinkState extends State<_HoverableFooterLink> {
     );
   }
 }
+
 

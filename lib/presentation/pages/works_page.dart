@@ -1,4 +1,4 @@
-﻿/// 🎨 Works Page - Projeler sayfası
+/// ?? Works Page - Projeler sayfası
 ///
 /// Bu sayfa, Hoş İşler platformundaki projeleri gösterir.
 library;
@@ -1255,7 +1255,7 @@ class _FooterWidget extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 12),
-        _buildMobileContactItem(Icons.email, 'seboagence@gmail.com'),
+        _buildMobileContactItem(Icons.email, 'sby@gmail.com'),
         _buildMobileContactItem(Icons.phone, '+90 (212) 123 45 67'),
         _buildMobileContactItem(Icons.location_on, 'İstanbul, Türkiye'),
       ],
@@ -1275,7 +1275,7 @@ class _FooterWidget extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 14),
-        _buildTabletContactItem(Icons.email, 'seboagence@gmail.com'),
+        _buildTabletContactItem(Icons.email, 'sby@gmail.com'),
         _buildTabletContactItem(Icons.phone, '+90 (212) 123 45 67'),
         _buildTabletContactItem(Icons.location_on, 'İstanbul, Türkiye'),
       ],
@@ -1295,7 +1295,7 @@ class _FooterWidget extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 16),
-        _buildContactItem(Icons.email, 'seboagence@gmail.com'),
+        _buildContactItem(Icons.email, 'sby@gmail.com'),
         _buildContactItem(Icons.phone, '+90 (212) 123 45 67'),
         _buildContactItem(Icons.location_on, 'İstanbul, Türkiye'),
       ],
@@ -1379,7 +1379,7 @@ class _FooterWidget extends StatelessWidget {
           ),
           const SizedBox(height: 4),
           Text(
-            'Geliştirildi ❤️ ile',
+            'Geliştirildi ?? ile',
             textAlign: TextAlign.center,
             style: AppTypography.bodySmall.copyWith(
               color: const Color(0xFF808080),
@@ -1408,7 +1408,7 @@ class _FooterWidget extends StatelessWidget {
             ),
           ),
           Text(
-            'Geliştirildi ❤️ ile',
+            'Geliştirildi ?? ile',
             style: AppTypography.bodySmall.copyWith(
               color: const Color(0xFF808080),
               fontSize: 9,
@@ -1436,7 +1436,7 @@ class _FooterWidget extends StatelessWidget {
             ),
           ),
           Text(
-            'Geliştirildi ❤️ ile',
+            'Geliştirildi ?? ile',
             style: AppTypography.bodySmall.copyWith(
               color: const Color(0xFF808080),
               fontSize: 10,
@@ -1492,4 +1492,5 @@ class _HoverableFooterLinkState extends State<_HoverableFooterLink> {
     );
   }
 }
+
 

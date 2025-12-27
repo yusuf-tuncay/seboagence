@@ -1,4 +1,4 @@
-﻿/// ℹ️ Ultra-Optimized About Page - Hakkımızda sayfası
+/// ?? Ultra-Optimized About Page - Hakkımızda sayfası
 ///
 /// Bu sayfa, ajans hakkında profesyonel ve kompakt bilgileri gösterir.
 library;
@@ -795,7 +795,7 @@ class _MissionVisionSection extends StatelessWidget {
           ),
           SizedBox(height: Branding.spacingS),
           Text(
-              'Biz; anlamlı, fayda üreten ve toplumsal değeri olan projeleri görünür kılmak için varız.\nStrateji → tasarım → üretim → ölçüm döngüsüyle işlerimizi uçtan uca yönetir; Hoş İşler platformu (Şifa/Şifa İpek, Vefa, Sefa) üzerinden hikâyeleri kalıcı etkiye dönüştürürüz.',
+              'Biz; anlamlı, fayda üreten ve toplumsal değeri olan projeleri görünür kılmak için varız.\nStrateji › tasarım › üretim › ölçüm döngüsüyle işlerimizi uçtan uca yönetir; Hoş İşler platformu (Şifa/Şifa İpek, Vefa, Sefa) üzerinden hikâyeleri kalıcı etkiye dönüştürürüz.',
               style: TextStyle(
                 color: Branding.white.withValues(alpha: 0.8),
                 fontSize: 14.0,
@@ -1943,7 +1943,7 @@ class _FooterWidget extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 12),
-        _buildMobileContactItem(Icons.email, 'seboagence@gmail.com'),
+        _buildMobileContactItem(Icons.email, 'sby@gmail.com'),
         _buildMobileContactItem(Icons.phone, '+90 (212) 555 0123'),
         _buildMobileContactItem(Icons.location_on, 'İstanbul, Türkiye'),
       ],
@@ -1963,7 +1963,7 @@ class _FooterWidget extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 14),
-        _buildTabletContactItem(Icons.email, 'seboagence@gmail.com'),
+        _buildTabletContactItem(Icons.email, 'sby@gmail.com'),
         _buildTabletContactItem(Icons.phone, '+90 (212) 555 0123'),
         _buildTabletContactItem(Icons.location_on, 'İstanbul, Türkiye'),
       ],
@@ -1983,7 +1983,7 @@ class _FooterWidget extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 16),
-        _buildContactItem(Icons.email, 'seboagence@gmail.com'),
+        _buildContactItem(Icons.email, 'sby@gmail.com'),
         _buildContactItem(Icons.phone, '+90 (212) 555 0123'),
         _buildContactItem(Icons.location_on, 'İstanbul, Türkiye'),
       ],
@@ -2067,7 +2067,7 @@ class _FooterWidget extends StatelessWidget {
           ),
           const SizedBox(height: 4),
           Text(
-            'Geliştirildi ❤️ ile',
+            'Geliştirildi ?? ile',
             textAlign: TextAlign.center,
             style: AppTypography.bodySmall.copyWith(
               color: const Color(0xFF808080),
@@ -2096,7 +2096,7 @@ class _FooterWidget extends StatelessWidget {
             ),
           ),
           Text(
-            'Geliştirildi ❤️ ile',
+            'Geliştirildi ?? ile',
             style: AppTypography.bodySmall.copyWith(
               color: const Color(0xFF808080),
               fontSize: 9,
@@ -2124,7 +2124,7 @@ class _FooterWidget extends StatelessWidget {
             ),
           ),
           Text(
-            'Geliştirildi ❤️ ile',
+            'Geliştirildi ?? ile',
             style: AppTypography.bodySmall.copyWith(
               color: const Color(0xFF808080),
               fontSize: 10,
@@ -2180,6 +2180,7 @@ class _HoverableFooterLinkState extends State<_HoverableFooterLink> {
     );
   }
 }
+
 
 
 

@@ -1,4 +1,4 @@
-﻿/// 📱 App Constants - Uygulama sabitleri
+/// ?? App Constants - Uygulama sabitleri
 ///
 /// Bu dosya, uygulama genelinde kullanılan sabit değerleri içerir.
 /// ASLA hardcoded değerler kullanma, buradan al!
@@ -58,7 +58,7 @@ class AppConstants {
   static const String deleteSuccessMessage = 'Kayıt başarıyla silindi';
 
   // İletişim Bilgileri
-  static const String companyEmail = 'seboagence@gmail.com';
+  static const String companyEmail = 'sby@gmail.com';
   static const String companyPhone = '+90 (212) 123 45 67';
   static const String companyAddress = 'İstanbul, Türkiye';
   static const String companyWebsite = 'www.seboagency.com';
@@ -79,5 +79,6 @@ class AppConstants {
   // Private constructor - Bu sınıf instantiate edilemez
   AppConstants._();
 }
+
 
 

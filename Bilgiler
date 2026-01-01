@@ -1,0 +1,8 @@
+Gmail: seboagence@gmail.com
+şifre: SeboAgence1010
+
+
+Kod değişikliklerini geri alabilirsin:
+
+VS Code’da Undo (Ctrl+Z)
+Veya Git ile: git restore <dosya> / git checkout -- <dosya> (dosya değişikliklerini geri alır).

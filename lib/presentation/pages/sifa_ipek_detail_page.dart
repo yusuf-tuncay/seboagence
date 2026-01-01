@@ -764,6 +764,98 @@ class _HeroSection extends StatelessWidget {
                 height: isMobile ? Branding.spacingM : Branding.spacingXXL,
               ),
 
+              // Hatay Sarısı İpeği hikayesi ve tescil bölümü
+              Container(
+                margin: EdgeInsets.symmetric(
+                  horizontal: isMobile
+                      ? 16.0
+                      : isTablet
+                      ? 60.0
+                      : 120.0,
+                ),
+                padding: EdgeInsets.all(
+                  isMobile
+                      ? Branding.spacingM
+                      : isTablet
+                      ? Branding.spacingXL
+                      : Branding.spacingXXL,
+                ),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(16),
+                  border: Border.all(color: const Color(0xFFE5E7EB), width: 1),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withValues(alpha: 0.06),
+                      blurRadius: 12,
+                      offset: const Offset(0, 4),
+                    ),
+                  ],
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Bir İpeğin Hafızası: Hatay Sarısı İpeği’nin Yolculuğu',
+                      style: TextStyle(
+                        color: const Color(0xFF1F2937),
+                        fontSize: isMobile
+                            ? 20.0
+                            : isTablet
+                            ? 24.0
+                            : 28.0,
+                        fontWeight: FontWeight.w800,
+                        letterSpacing: -0.3,
+                      ),
+                    ),
+                    SizedBox(
+                      height:
+                          isMobile ? Branding.spacingS : Branding.spacingL,
+                    ),
+                    Text(
+                      'Bazı hikâyeler vardır; yüksek sesle anlatılmaz ama derin izler bırakır. Hatay Sarısı İpeği de tam olarak böyle bir miras. Yıllar boyunca neredeyse tamamen kaybolan, adını bilenin azaldığı bu özel ipek türü; Defne Apollon İpekçilik’in sabrı, inancı ve nesilden nesile aktarılan bilgisi sayesinde yeniden hayat buldu. İpek böceğinden kozaya, kozanın sabırla ipeğe dönüşmesine kadar uzanan bu yolculuk; yalnızca bir üretim süreci değil, bir hafızanın korunmasıydı. Emel Duman ve Defne Apollon’un öncülüğünde yürütülen uzun ve yorucu bir emeğin sonunda Hatay Sarısı İpeği, Türk Patent ve Marka Kurumu tarafından coğrafi işaretle tescillenerek Hatay’ın adına kayıtlı bir değer haline geldi. Bu tescil; kaybolmak üzere olan endemik bir ipeğin, ait olduğu topraklarla birlikte yeniden tanınması anlamına geliyor.',
+                      style: TextStyle(
+                        color: const Color(0xFF374151),
+                        fontSize: isMobile
+                            ? 12.0
+                            : isTablet
+                            ? 14.0
+                            : 16.0,
+                        fontWeight: FontWeight.w500,
+                        height: isTablet ? 1.4 : 1.5,
+                      ),
+                      textAlign: TextAlign.justify,
+                    ),
+                    SizedBox(
+                      height:
+                          isMobile ? Branding.spacingM : Branding.spacingL,
+                    ),
+                    Text(
+                      'İpek böceği yetiştiriciliği ve geleneksel ipek üretimini aile mirası olarak sürdüren Emel Duman ve Defne Apollon, Hatay Sarısı İpeği’nin yalnızca bir ürün değil; bölgeye özgü, endemik ve korunması gereken kültürel bir değer olduğunu bilimsel ve resmi süreçlerle ortaya koydu. T.C. Hatay Valiliği ve Hatay Mustafa Kemal Üniversitesi iş birliğiyle hazırlanan başvuru dosyası, 13 Haziran 2023’te yapılan müracaatın ardından 17 Eylül 2025 itibarıyla tescil ile sonuçlandı. Bu süreç, bir ödül ya da görünür bir törenle değil; yıllara yayılan sabır, bilgi ve inatçı bir koruma mücadelesiyle tamamlandı. Hatay Sarısı İpeği bugün literatüre Hatay adıyla kayıtlı bir kültürel miras olarak girmiştir. Bu tescil, yalnızca geçmişin korunması değil; aynı zamanda yerel üretimin, kadın emeğinin ve sürdürülebilir kültürel ekonominin geleceğe taşınması anlamına gelmektedir.',
+                      style: TextStyle(
+                        color: const Color(0xFF374151),
+                        fontSize: isMobile
+                            ? 12.0
+                            : isTablet
+                            ? 14.0
+                            : 16.0,
+                        fontWeight: FontWeight.w500,
+                        height: isTablet ? 1.4 : 1.5,
+                      ),
+                      textAlign: TextAlign.justify,
+                    ),
+                    SizedBox(
+                      height:
+                          isMobile ? Branding.spacingM : Branding.spacingXL,
+                    ),
+                    const _SifaCertificateGallery(),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: isMobile ? Branding.spacingM : Branding.spacingXXL,
+              ),
+
               // Alt başlık
               Text(
                 'Toplumsal İyileşme ve Sürdürülebilir Kalkınma',
@@ -1094,6 +1186,172 @@ class _HeroSection extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+class _SifaCertificateGallery extends StatelessWidget {
+  const _SifaCertificateGallery();
+
+  void _showImageDialog(BuildContext context, String imagePath) {
+    Navigator.of(context).push(
+      PageRouteBuilder(
+        opaque: false,
+        pageBuilder: (context, animation, secondaryAnimation) {
+          return PopScope(
+            canPop: true,
+            onPopInvokedWithResult: (didPop, result) {
+              if (!didPop) {
+                Navigator.of(context).pop();
+              }
+            },
+            child: Scaffold(
+              backgroundColor: Colors.black.withValues(alpha: 0.7),
+              body: GestureDetector(
+                onTap: () => Navigator.of(context).pop(),
+                child: Container(
+                  width: double.infinity,
+                  height: double.infinity,
+                  color: Colors.transparent,
+                  child: Center(
+                    child: AbsorbPointer(
+                      absorbing: false,
+                      child: Container(
+                        constraints: BoxConstraints(
+                          maxWidth: MediaQuery.of(context).size.width * 0.9,
+                          maxHeight: MediaQuery.of(context).size.height * 0.8,
+                        ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Image.asset(
+                            imagePath,
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          );
+        },
+        transitionDuration: const Duration(milliseconds: 300),
+        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+          return FadeTransition(opacity: animation, child: child);
+        },
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final isMobile = Responsive.isMobile(context);
+    final isTablet = Responsive.isTablet(context);
+
+    final images = [
+      {
+        'path': 'assets/images/sifa3.jpeg',
+        'label': 'Şifa Projesi belgesi 1',
+      },
+      {
+        'path': 'assets/images/sifa4.jpeg',
+        'label': 'Şifa Projesi belgesi 2',
+      },
+      {
+        'path': 'assets/images/sifa5.jpeg',
+        'label': 'Şifa Projesi belgesi 3',
+      },
+      {
+        'path': 'assets/images/sifa6.jpg',
+        'label': 'Şifa Projesi belgesi 4',
+      },
+      {
+        'path': 'assets/images/sifa7.jpg',
+        'label': 'Şifa Projesi belgesi 5',
+      },
+      {
+        'path': 'assets/images/sifa8.jpg',
+        'label': 'Şifa Projesi belgesi 6',
+      },
+    ];
+
+    final double spacing = isMobile ? 12 : 16;
+    final int columns = isMobile ? 1 : isTablet ? 2 : 3;
+
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final double itemWidth =
+            (constraints.maxWidth - (columns - 1) * spacing) / columns;
+
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Tescil ve belge görselleri',
+              style: TextStyle(
+                color: const Color(0xFF1F2937),
+                fontSize: isMobile ? 16.0 : 18.0,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+            SizedBox(height: spacing),
+            Wrap(
+              spacing: spacing,
+              runSpacing: spacing,
+              children: images
+                  .map(
+                    (image) => SizedBox(
+                      width: itemWidth,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: GestureDetector(
+                              onTap: () => _showImageDialog(
+                                context,
+                                image['path']!,
+                              ),
+                              child: AspectRatio(
+                                aspectRatio: 4 / 3,
+                                child: Image.asset(
+                                  image['path']!,
+                                  fit: BoxFit.cover,
+                                  errorBuilder: (context, error, stackTrace) {
+                                    return Container(
+                                      color: const Color(0xFFF3F4F6),
+                                      child: Center(
+                                        child: Icon(
+                                          Icons.image,
+                                          color: const Color(0xFF9CA3AF),
+                                          size: isMobile ? 32 : 48,
+                                        ),
+                                      ),
+                                    );
+                                  },
+                                ),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 8),
+                          Text(
+                            image['label']!,
+                            style: TextStyle(
+                              color: const Color(0xFF6B7280),
+                              fontSize: isMobile ? 12.0 : 13.0,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  )
+                  .toList(),
+            ),
+          ],
+        );
+      },
     );
   }
 }

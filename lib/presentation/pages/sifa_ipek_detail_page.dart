@@ -1252,27 +1252,27 @@ class _SifaCertificateGallery extends StatelessWidget {
     final images = [
       {
         'path': 'assets/images/sifa3.jpeg',
-        'label': 'Şifa Projesi belgesi 1',
+        'label': 'Görsel',
       },
       {
         'path': 'assets/images/sifa4.jpeg',
-        'label': 'Şifa Projesi belgesi 2',
+        'label': 'Görsel',
       },
       {
         'path': 'assets/images/sifa5.jpeg',
-        'label': 'Şifa Projesi belgesi 3',
+        'label': 'Görsel',
       },
       {
         'path': 'assets/images/sifa6.jpg',
-        'label': 'Şifa Projesi belgesi 4',
+        'label': 'Görsel',
       },
       {
         'path': 'assets/images/sifa7.jpg',
-        'label': 'Şifa Projesi belgesi 5',
+        'label': 'Görsel',
       },
       {
         'path': 'assets/images/sifa8.jpg',
-        'label': 'Şifa Projesi belgesi 6',
+        'label': 'Görsel',
       },
     ];
 
@@ -1288,7 +1288,7 @@ class _SifaCertificateGallery extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Tescil ve belge görselleri',
+              'Tescil ve proje görselleri',
               style: TextStyle(
                 color: const Color(0xFF1F2937),
                 fontSize: isMobile ? 16.0 : 18.0,
